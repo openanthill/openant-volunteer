@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_volunteer_project_manager,Full access on volunteer.project to Volunteer Manager,volunteer_base.model_volunteer_project,group_volunteer_manager,1,1,1,1
+access_volunteer_engagements_manager,Full access on volunteer.engagement to Volunteer Manager,volunteer_base.model_volunteer_engagement,group_volunteer_manager,1,1,1,1
+access_volunteer_volunteer_manager,Full access on volunteer.volunteer to Volunteer Manager,volunteer_base.model_volunteer_volunteer,group_volunteer_manager,1,1,1,1
+access_engagement_cancel_reason_manager,Full access on engagement.cancel.reason to Volunteer Manager,volunteer_base.model_engagement_cancel_reason,volunteer.group_volunteer_manager,1,1,1,1

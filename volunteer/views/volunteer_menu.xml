@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  © 2020 humanilog (https://www.humanilog.org)
+  License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+
+<odoo>
+
+<!-- Menu items -->
+    <menuitem id="volunteer_top_menu" 
+        name="Volunteers"
+        web_icon="volunteer,static/description/icon.png"
+        sequence="10"/>
+
+        <menuitem id="title_menu_volunteer"
+            parent="volunteer_top_menu"
+            name="Volunteers"
+            sequence="10"/>
+
+            <menuitem id="menu_volunteers"
+                parent="title_menu_volunteer"
+                action="volunteer_base.volunteer_volunteer_action"
+                name="Volunteers"
+                sequence="10"/>
+
+            <menuitem id="menu_volunteer_project"
+                name="Projects"
+                parent="title_menu_volunteer"
+                action="volunteer_base.volunteer_project_action"
+                sequence="10"/>
+
+            <menuitem id="menu_volunteer_engagement"
+                name="Engagements"
+                parent="title_menu_volunteer"
+                action="volunteer_base.volunteer_engagement_action"
+                sequence="20"/>
+
+        <menuitem id="volunteer_config_menu"
+            parent="volunteer_top_menu"
+            name="Configuration"
+            groups="volunteer.group_volunteer_manager"
+            sequence="50"/>
+
+            <menuitem id="engegement_cancel_reason_menu"
+                parent="volunteer.volunteer_config_menu"
+                name="Engagement cancel reasons"
+                action="volunteer_base.engagement_cancel_reason_action"  
+                sequence="40"/>
+
+</odoo>
