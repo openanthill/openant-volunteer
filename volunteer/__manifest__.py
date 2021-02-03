@@ -18,9 +18,14 @@
         'views/volunteer_menu.xml',
         # 'views/volunteer_profession.xml',
         # 'views/volunteer_skills.xml',
-        ],
+    ],
     'demo': [
         # 'demo/donation_demo.xml'
+        'demo/res_user_demo.xml',
+        'demo/res_partner_demo.xml',
+        'demo/volunteer_demo.xml',
+        'demo/volunteer_project_demo.xml',
+        'demo/volunteer_engagement_demo.xml',
     ],
     'installable': True,
 }
