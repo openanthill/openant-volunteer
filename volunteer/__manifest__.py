@@ -1,4 +1,4 @@
-# Copyright 2020  humanilog <www.humanilog.org>
+# © 2021 humanilog (https://www.humanilog.org)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
@@ -16,11 +16,8 @@
         'security/volunteer_security.xml',
         'security/ir.model.access.csv',
         'views/volunteer_menu.xml',
-        # 'views/volunteer_profession.xml',
-        # 'views/volunteer_skills.xml',
     ],
     'demo': [
-        # 'demo/donation_demo.xml'
         'demo/res_user_demo.xml',
         'demo/res_partner_demo.xml',
         'demo/volunteer_demo.xml',
