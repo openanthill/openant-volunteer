@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- Menu item action -->
+    <record id="volunteer_engagement_action" model="ir.actions.act_window">
+        <field name="name">Engagements</field>
+        <field name="res_model">volunteer.engagement</field>
+        <field name="view_mode">tree,form</field>
+        <!-- <field name="search_view_id" ref="volunteer_engagement_view_filter"/> -->
+        <!-- <field name="context">{'search_default_group_by_state': 1}</field> -->
+    </record>
+
+<!-- Views -->
+    <!-- <record id="volunteer_engagement_view_filter" model="ir.ui.view">
+        <field name="name">volunteer.engagement.search</field>
+        <field name="model">volunteer.engagement</field>
+        <field name="arch" type="xml">
+            <search string="Engagements">
+                <field name="employee" readonly="True" string="Engagierte*r"/>
+                <filter name="group_by_state" string="State" context="{'group_by': 'state'}"/>
+                <searchpanel>
+                    <field name="project" string="Projekt(e)" icon="fa-users"/>
+                    <field name="project_department" string="Standort(e)" icon="fa-building" select="multi"/>
+                    <field name="main_role" string="Rolle(n)" icon="fa-tasks" select="multi" domain="[('projects', 'in', project), ('is_main_role', '=', True)]"/>
+                    <field name="additional_roles" string="Zusatzrolle(n)" icon="fa-tasks" select="multi" domain="[('projects', 'in', project), ('is_additional_role', '=', True)]"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record> -->
+
+    <record id="volunteer_engagement_view_form_base" model="ir.ui.view">
+        <field name="name">volunteer.engagement.view.form.base</field>
+        <field name="model">volunteer.engagement</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <!-- <button string="Start"
+                            type="action"
+                            name="%(volunteer_engagement_start_action)d" 
+                            class="oe_highlight"
+                            attrs="{'invisible': [('state', '!=', 'new')]}"/> -->
+                    <!-- <button string="On-Hold"
+                            type="action"
+                            name="%(volunteer_engagement_on_hold_action)d" 
+                            attrs="{'invisible': [('state', '=', 'success'), ('state', '=', 'cancel')]}"/>                    
+                    <button string="Accomplished"
+                            type="action"
+                            name="%(volunteer_engagement_success_action)d" 
+                            class="oe_highlight"
+                            attrs="{'invisible': [('state', '!=', 'active')]}"/> -->
+                    <button string="Cancel"
+                            type="action"
+                            name="%(volunteer_engagement_cancel_action)d" 
+                            class="oe_highlight"
+                            attrs="{'invisible': [('state', '=', 'success'), ('state', '=', 'cancel')]}"/>
+                    <!-- <button string="Set to New"
+                            type="action"
+                            name="%(volunteer_engagement_set_new_action)d" 
+                            attrs="{'invisible': [('state', '!=', 'cancel')]}"/> -->
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group name="engagement_info" string="Engagement Information">
+                        <group name="volunteer" string="Volunteer">
+                            <field name="volunteer_id"/>
+                        </group>
+                        <group name="project" string="Project">
+                            <field name="volunteer_project_id"/>
+                        </group>
+                        <group name="time_details" string="Time Details">
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                            <!-- <field name="state_onhold_until" attrs="{'invisible':[('state', '!=', 'onhold')], 'required':[('state', '=', 'onhold')]}"/> -->
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field> 
+    </record>
+
+    <record id="volunteer_engagement_view_tree_base" model="ir.ui.view">
+        <field name="name">volunteer.engagement.view.tree.base</field>
+        <field name="model">volunteer.engagement</field>
+        <field name="arch" type="xml">
+            <tree> 
+                <field name="volunteer_project_id"/>
+                <field name="volunteer_id"/>
+                <field name="state"/>
+                <field name="state_onhold_until"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+            </tree> 
+        </field> 
+    </record>
+
+    <record id="engagement_cancel_reason_action" model="ir.actions.act_window">
+        <field name="name">Cancel Reasons</field>
+        <field name="res_model">engagement.cancel.reason</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            Define a new Cancel reason
+            </p><p>
+            Use cancel reasons to explain why an engagement was canceled by an volunteer.
+            </p><p>
+            Some examples of cancel reasons: "Chaotic Organisation", "Lack of apreciation"
+            </p>
+        </field>
+    </record>
+
+    <record id="engagement_cancel_reason_view_search" model="ir.ui.view">
+        <field name="name">>engagement.cancel.reason.view.search</field>
+        <field name="model">engagement.cancel.reason</field>
+        <field name="arch" type="xml">
+            <search string="Cancel Reasons">
+                <filter string="Include archived" name="archived"
+                        domain="['|', ('active', '=', True), ('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="engagement_cancel_reason_view_form" model="ir.ui.view">
+        <field name="name">engagement.cancel.reason.view.form</field>
+        <field name="model">engagement.cancel.reason</field>
+        <field name="arch" type="xml">
+            <form string="Cancel Reasons">
+                <group>
+                    <field name="name"/>
+                    <field name="active"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+</odoo>
