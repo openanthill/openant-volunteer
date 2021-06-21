@@ -4,12 +4,13 @@
 from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
 
+
 class VolunteerProject(models.Model):
     _name = 'volunteer.project'
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Volunteer Projects'
+    _order = 'sequence, name, id'    
 
-    # FIELDS
     active = fields.Boolean(
         default=True,
         help="The active field allows you to hide the project without removing it."
@@ -20,7 +21,17 @@ class VolunteerProject(models.Model):
         required=True,
         tracking=True,
         track_visibility='always',
+        translate=True,
         help="Name of the volunteer project",
+    )
+    sequence = fields.Char(
+        string='Reference',
+        default="/",
+        help="Sequence to identify volunteer projects easily",
+    )
+    description = fields.Html(
+        string='Project Description',
+        translate=True,
     )
     timeframe = fields.Selection(
         string='Timeframe',
@@ -38,6 +49,39 @@ class VolunteerProject(models.Model):
     )
     date_end = fields.Date(string='End Date'
     )
+    engagement_default_duration = fields.Integer(
+        default=1,
+        string='Default Duration',
+        help="Default duration for engagements created for this project.\n"
+             "This timeframe will be used for computation of start and end dates",
+    )
+    engagement_default_duration_type = fields.Selection([
+        ('daily', 'Day(s)'),
+        ('weekly', 'Week(s)'),
+        ('monthly', 'Month(s)')],
+        default='monthly',
+        string='Duration Type',
+        help="Specify duration type for engagement default duration.",
+    )
+    engagement_ids = fields.One2many(
+        'volunteer.engagement',
+        'volunteer_project_id',
+        string='Engagements',
+    )
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if vals.get('sequence', '/') == '/':
+                vals['sequence'] = self.env['ir.sequence'].next_by_code('volunteer.project')
+        return super(VolunteerProject, self).create(vals_list)
+
+    @api.multi
+    def copy(self, default=None):
+        if default is None:
+            default = {}
+        default['sequence'] = self.env['ir.sequence'].next_by_code('volunteer.project')
+        return super(VolunteerProject, self).copy(default)
 
     @api.constrains('date_start', 'date_end')
     def _check_default_date_start_ends(self):

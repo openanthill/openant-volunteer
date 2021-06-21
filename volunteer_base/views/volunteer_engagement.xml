@@ -6,13 +6,6 @@
 
 <odoo>
 
-<!-- Menu item action -->
-    <record id="volunteer_engagement_action" model="ir.actions.act_window">
-        <field name="name">Engagements</field>
-        <field name="res_model">volunteer.engagement</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-
     <record id="volunteer_engagement_view_form_base" model="ir.ui.view">
         <field name="name">volunteer.engagement.view.form.base</field>
         <field name="model">volunteer.engagement</field>
@@ -23,21 +16,21 @@
                             type="object" 
                             string="Start"
                             class="oe_highlight"
-                            attrs="{'invisible': [('state', '!=', 'new'), ('state', '!=', 'onhold')]}"/>
-                    <button name="action_volunteer_engagement_on_hold"
-                            type="object" 
-                            string="On-Hold"
+                            attrs="{'invisible': [('state', '!=', 'new'), ('state', '!=', 'onhold')]}"/>        
+                    <button string="On-Hold"
+                            type="action"
+                            name="%(volunteer_engagement_onhold_action)d"
                             states="active"/>
                     <button name="action_volunteer_engagement_success"
                             type="object" 
                             string="Accomplished"
                             class="oe_highlight"
                             states="active"/>                                                        
-                    <button string="Cancel"
+                    <button string="Cancel Engagement"
                             type="action"
                             name="%(volunteer_engagement_cancel_action)d" 
                             class="oe_highlight"
-                            attrs="{'invisible': [('state', '=', 'success'), ('state', '=', 'cancel')]}"/>
+                            attrs="{'invisible': ['|', ('state', '=', 'success'), ('state', '=', 'cancel')]}"/>
                     <button name="action_volunteer_engagement_reset"
                             type="object" 
                             string="Reset to New"
@@ -45,9 +38,20 @@
                     <field name="state" widget="statusbar"/>
                 </header>
                 <sheet>
-                    <group name="engagement_info" string="Engagement Information" attrs="{'readonly': ('state', 'in', ['success', 'cancel'])}">
+                    <div class="oe_button_box" name="button_box">
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" attrs="{'invisible': [('name', '=', '/')]}"/>
+                        </h1>
+                    </div>
+                    <group name="engagement_info" attrs="{'readonly': ('state', 'in', ['success', 'cancel'])}">
                         <group name="volunteer" string="Volunteer">
-                            <field name="volunteer_id"/>
+                            <field name="partner_id"
+                                   widget="res_partner_many2one"
+                                   domain="[('is_company','=',False)]"
+                                   context="{'search_default_customer':1, 'show_address': 1, 'show_vat': False}"
+                                   options='{"always_reload": True}'/>
                         </group>
                         <group name="project" string="Project">
                             <field name="volunteer_project_id"/>
@@ -55,7 +59,8 @@
                         <group name="time_details" string="Time Details">
                             <field name="start_date"/>
                             <field name="end_date"/>
-                            <field name="state_onhold_until" attrs="{'invisible':[('state', '!=', 'onhold')], 'required':[('state', '=', 'onhold')]}"/>
+                            <field name="state_onhold_until" 
+                                   attrs="{'invisible':[('state', '!=', 'onhold')], 'required':[('state', '=', 'onhold')]}"/>
                         </group>
                     </group>
                 </sheet>
@@ -74,13 +79,42 @@
         <field name="arch" type="xml">
             <tree> 
                 <field name="volunteer_project_id"/>
-                <field name="volunteer_id"/>
+                <field name="partner_id"/>
                 <field name="state"/>
-                <field name="state_onhold_until"/>
                 <field name="start_date"/>
                 <field name="end_date"/>
+                <field name="state_onhold_until"/>
             </tree> 
         </field> 
+    </record>
+
+    <record id="volunteer_engagement_search" model="ir.ui.view">
+        <field name="name">volunteer.engagement.search</field>
+        <field name="model">volunteer.engagement</field>
+        <field name="arch" type="xml">
+            <search string="Search Engagements">
+                <field name="partner_id" string="Volunteer"/>
+                <field name="volunteer_project_id"/>
+                <group string="Group By" name="groupby">
+                    <filter name="partner_groupby" string="Partner"
+                        context="{'group_by': 'partner_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="volunteer_engagement_action" model="ir.actions.act_window">
+        <field name="name">Volunteer Engagements</field>
+        <field name="res_model">volunteer.engagement</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="volunteer_engagement_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new engagemens for volunteers.
+            </p><p>
+                openAnt helps you to easily track all activities related to an engagment.
+            </p>
+        </field>
     </record>
 
     <record id="engagement_cancel_reason_action" model="ir.actions.act_window">
@@ -115,6 +149,46 @@
         <field name="model">engagement.cancel.reason</field>
         <field name="arch" type="xml">
             <form string="Cancel Reasons">
+                <group>
+                    <field name="name"/>
+                    <field name="active"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="engagement_onhold_reason_action" model="ir.actions.act_window">
+        <field name="name">On hold Reasons</field>
+        <field name="res_model">engagement.onhold.reason</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            Define a new on hold reason
+            </p><p>
+            Use on hold reasons to explain why an engagement was put on hold by an volunteer.
+            </p><p>
+            Some examples of on hold reasons: "travelling", "personal"
+            </p>
+        </field>
+    </record>
+
+    <record id="engagement_onhold_reason_view_search" model="ir.ui.view">
+        <field name="name">>engagement.onhold.reason.view.search</field>
+        <field name="model">engagement.onhold.reason</field>
+        <field name="arch" type="xml">
+            <search string="On hold Reasons">
+                <filter string="Include archived" name="archived"
+                        domain="['|', ('active', '=', True), ('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="engagement_onhold_reason_view_form" model="ir.ui.view">
+        <field name="name">engagement.onhold.reason.view.form</field>
+        <field name="model">engagement.onhold.reason</field>
+        <field name="arch" type="xml">
+            <form string="On hold Reasons">
                 <group>
                     <field name="name"/>
                     <field name="active"/>
