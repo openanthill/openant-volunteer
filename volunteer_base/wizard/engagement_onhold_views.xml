@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+  © 2021 humanilog (https://www.humanilog.org)
+  License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+
+<odoo>
+        <record id="volunteer_engagement_onhold_view_form" model="ir.ui.view">
+            <field name="name">volunteer.engagement.onhold.view.form</field>
+            <field name="model">engagement.onhold</field>
+            <field name="arch" type="xml">
+                <form string="On hold Reason">
+                    <group class="oe_title">
+                        <field name="onhold_reason_id"/>
+                    </group>
+                    <footer>
+                        <button name="action_onhold_reason_apply" string="Submit" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>                      
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="volunteer_engagement_onhold_action" model="ir.actions.act_window">
+            <field name="name">On hold Reason</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">engagement.onhold</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="volunteer_engagement_onhold_view_form"/>
+            <field name="target">new</field>
+        </record>
+        
+</odoo>
