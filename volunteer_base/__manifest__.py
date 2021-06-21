@@ -6,7 +6,7 @@
     'version': '12.0.1.0.0',
     'category': 'openant base',
     'license': 'AGPL-3',
-    'summary': 'openAnt Volunteer base',
+    'summary': 'Volunteer base module',
     'author': 'humanilog',
     'website': 'https://github.com/openanthill',
     'depends': [
@@ -14,14 +14,22 @@
         'mail',        
     ],
     'data': [
+        'security/ir.model.access.csv',
+
+        'data/ir_sequence_data.xml',
+        'data/reason_data.xml',
 
         'wizard/engagement_cancel_views.xml',
+        'wizard/engagement_onhold_views.xml',
 
+        'views/res_partner.xml',
         'views/volunteer_engagement.xml',
         'views/volunteer_project.xml',
-        'views/volunteer_volunteer.xml',
-        ],
+    ],
     'demo': [
+        'demo/res_partner_demo.xml',
+        'demo/volunteer_project_demo.xml',
+        'demo/volunteer_engagement_demo.xml',
     ],
     'installable': True,
 }

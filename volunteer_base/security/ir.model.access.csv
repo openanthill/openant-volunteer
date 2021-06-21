@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_volunteer_project_all,Read Access on volunteer.project to all users,volunteer_base.model_volunteer_project,base.group_user,1,0,0,0
+access_volunteer_engagements_all,Read access on volunteer.engagement to all users,volunteer_base.model_volunteer_engagement,base.group_user,1,0,0,0
+access_engagement_cancel_reason_all,Read access on engagement.cancel.reason to all users,volunteer_base.model_engagement_cancel_reason,base.group_user,1,0,0,0
+access_engagement_onhold_reason_all,Read access on engagement.onhold.reason to all users,volunteer_base.model_engagement_onhold_reason,base.group_user,1,0,0,0
