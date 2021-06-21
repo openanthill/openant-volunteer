@@ -1,10 +1,5 @@
-[ This file is optional, it should explain how to configure
-  the module before using it; it is aimed at advanced users. ]
+Detailed information about the configuration of this module´s base functionalities can be found
+in the major modules depending on it.
 
-To configure this module, you need to:
-
-#. Go to ...
-
-.. figure:: ../static/description/image.png
-   :alt: alternative description
-   :width: 600 px
+The volunteer module is an application module and adds an app to the system for volunteer management exclusively.
+The vounteer_hr module implements volunteer management into the hr module.

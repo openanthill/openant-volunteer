@@ -6,14 +6,32 @@
 Volunteer Base
 ==============
 
-This is the base module for volunteer management in a nonprofit organisation.
-Due to it's base character this module doesn't add functionality for end usere's, but implements
+Description
+===========
+
+This is the base module for volunteer management in nonprofit organisatios.
+Due to its basic character this module doesn't add functionality for end users, but implements
 basic elements which other modules can build on.
 
-These elements are volunteers, volunteer projects which are projects an organisation needs volunteer
-support for and engagements which represent a relation between the two before mentioned.
+These elements are volunteer projects. Volunteer projects are projects an organisation needs voluntary
+support for. The module helps to create relations between projects and volunteers engaging in these projects.
 
-To get some real features, you should install the *volunteer* module.
+Furthermore cancel and on-hold reasons for volunteer engagements can be defined.
+
+Configuration
+=============
+
+Detailed information about the configuration of this module´s base functionalities can be found
+in the major modules depending on it.
+
+The volunteer module is an application module and adds an app to the system for volunteer management exclusively.
+The vounteer_hr module implements volunteer management into the hr module.
+
+Usage
+=====
+
+For detailed information on the usage of this module see the depending modules 
+as mentioned above.
 
 Bug Tracker
 ===========
