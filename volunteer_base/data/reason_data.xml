@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+<!-- Engagement cancel Reasons -->
+    <record id="engagement_cancel_reason_high_workload" model="engagement.cancel.reason">
+        <field name="name">High workload in fulltime job</field>    
+    </record>
+
+    <record id="engagement_cancel_reason_change_residency" model="engagement.cancel.reason">
+        <field name="name">Change of residency</field>    
+    </record>
+
+    <record id="engagement_cancel_reason_misfit" model="engagement.cancel.reason">
+        <field name="name">Engagement does not fit</field>    
+    </record>
+
+    <record id="engagement_cancel_reason_no_response" model="engagement.cancel.reason">
+        <field name="name">No response</field>    
+    </record>
+
+    <record id="engagement_cancel_reason_interest_loss" model="engagement.cancel.reason">
+        <field name="name">Loss of interest</field>    
+    </record>
+
+<!-- Engagement on-hold Reasons -->
+    <record id="engagement_onhold_reason_disease" model="engagement.onhold.reason">
+        <field name="name">Disease</field>    
+    </record>
+
+    <record id="engagement_onhold_reason_project_timeout" model="engagement.onhold.reason">
+        <field name="name">Project Timeout</field>    
+    </record>
+
+    <record id="engagement_onhold_reason_high_workload" model="engagement.onhold.reason">
+        <field name="name">High workload in fulltime job</field>    
+    </record>
+
+    <record id="engagement_cancel_reason_change_residency" model="engagement.onhold.reason">
+        <field name="name">Change of residency</field>    
+    </record>
+
+</odoo>
