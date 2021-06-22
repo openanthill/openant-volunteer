@@ -6,10 +6,29 @@
 Volunteer
 ==============
 
-This module implements a new volunteer app with an dedicated menu structure for volunteer management.
+Description
+===========
 
-Volunteers and projects with a need for voluntary support can ba created. By using engagements volunteers
-are asignable to projects and details about the engagements can be tracked.
+This module implements a new volunteer app with an dedicated menu structure and user groups for volunteer management. 
+Create volunteer projects and assign volunteers via engagements.
+
+Configuration
+=============
+
+To configure this module, you need to go to volunteer => configuration and:
+
+* define engagement on-hold reasons
+* define engagement cancel reasons
+
+Usage
+=====
+
+Create Projects volunteer support is needed for and configure the time details.
+
+Contact volunteers about the need for support and assign those willing to support
+via an engagement.
+
+Engagement´s status can be tracked and on-hold and cancel resons logged.
 
 Bug Tracker
 ===========
@@ -33,6 +52,7 @@ Maintainer
 ----------
 
 https://openant.net/
+
 https://humanilog.org/
 
 This module is maintained by the openAnt network.

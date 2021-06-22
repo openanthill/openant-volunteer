@@ -1,8 +1,6 @@
-To use this module, go to the menu Donations > Donations and start to register new donations.
+Create Projects volunteer support is needed for and configure the time details.
 
-To have some statistics about the donations, go to the menu Reporting > Donations > Donations Analysis.
+Contact volunteers about the need for support and assign those willing to support
+via an engagement.
 
-.. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
-   :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/180/11.0
-
+Engagement´s status can be tracked and on-hold and cancel resons logged.
