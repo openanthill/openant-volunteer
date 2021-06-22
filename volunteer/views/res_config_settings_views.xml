@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  © 2021 humanilog (https://www.humanilog.org)
+  License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form_volunteer" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.volunteer</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="60"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block" data-string="Volunteers" string="Volunteers" data-key="volunteer" groups="volunteer.group_volunteer_manager">
+                        <h2>Engagements</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane">
+                                    <label for="engagement_onhold_days"/>
+                                    <span class="fa fa-lg fa-building-o" title="Values set here are company-specific." role="img" aria-label="Values set here are company-specific." groups="base.group_multi_company"/>
+                                    <div class="row">
+                                        <div class="text-muted col-lg-8">
+                                            Set default days for computation of on hold until dates in engagements...
+                                        </div>
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="engagement_onhold_days"
+                                                class="o_light_label"
+                                                domain="[('company_id', '=', company_id)]"
+                                                context="{'default_company_id': company_id}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="action_volunteer_configuration" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module' : 'volunteer'}</field>
+        </record>
+
+        <menuitem id="menu_volunteer_global_settings" name="Settings"
+            parent="volunteer_config_menu" sequence="0" action="action_volunteer_configuration" groups="base.group_system"/>
+    </data>
+</odoo>

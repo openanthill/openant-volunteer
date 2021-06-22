@@ -6,7 +6,7 @@
     'version': '12.0.1.0.0',
     'category': 'openant',
     'license': 'AGPL-3',
-    'summary': 'openAnt Volunteers',
+    'summary': 'Volunteers management',
     'author': 'humanilog',
     'website': 'https://github.com/openanthill',
     'depends': [
@@ -15,14 +15,13 @@
     'data': [
         'security/volunteer_security.xml',
         'security/ir.model.access.csv',
+        
+        'views/res_partner.xml',
         'views/volunteer_menu.xml',
+        'views/res_config_settings_views.xml',
     ],
     'demo': [
         'demo/res_user_demo.xml',
-        'demo/res_partner_demo.xml',
-        'demo/volunteer_demo.xml',
-        'demo/volunteer_project_demo.xml',
-        'demo/volunteer_engagement_demo.xml',
     ],
     'installable': True,
 }

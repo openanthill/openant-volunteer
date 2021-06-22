@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  © 2021 humanilog (https://www.humanilog.org)
+  License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+
+<odoo>
+           
+    <record id="action_partner_volunteer_form" model="ir.actions.act_window">
+        <field name="name">Volunteers</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_type">form</field>
+        <field name="domain">[]</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="context">{'search_default_type_person': 1, 'default_is_company': False}</field>
+        <field name="filter" eval="True"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            Create a new volunteers in your address book
+            </p><p>
+            Odoo helps you easily track all activities related to a volunteers.
+            </p>
+        </field>
+    </record>
+
+</odoo>

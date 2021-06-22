@@ -19,7 +19,7 @@
 
             <menuitem id="menu_volunteers"
                 parent="title_menu_volunteer"
-                action="volunteer_base.volunteer_volunteer_action"
+                action="action_partner_volunteer_form"
                 name="Volunteers"
                 sequence="10"/>
 
@@ -27,13 +27,13 @@
                 name="Projects"
                 parent="title_menu_volunteer"
                 action="volunteer_base.volunteer_project_action"
-                sequence="10"/>
+                sequence="20"/>
 
             <menuitem id="menu_volunteer_engagement"
                 name="Engagements"
                 parent="title_menu_volunteer"
                 action="volunteer_base.volunteer_engagement_action"
-                sequence="20"/>
+                sequence="30"/>
 
         <menuitem id="volunteer_config_menu"
             parent="volunteer_top_menu"
@@ -42,9 +42,15 @@
             sequence="50"/>
 
             <menuitem id="engegement_cancel_reason_menu"
-                parent="volunteer.volunteer_config_menu"
+                parent="volunteer_config_menu"
                 name="Engagement cancel reasons"
                 action="volunteer_base.engagement_cancel_reason_action"  
                 sequence="40"/>
+
+            <menuitem id="engegement_onhold_reason_menu"
+                parent="volunteer_config_menu"
+                name="Engagement on hold reasons"
+                action="volunteer_base.engagement_onhold_reason_action"  
+                sequence="60"/>
 
 </odoo>
