@@ -37,17 +37,18 @@ class VolunteerProject(models.Model):
         string='Timeframe',
         selection = [
             ('ongoing', 'Ongoing'),
-            ('period', 'Time Period'),
-        ],
+            ('period', 'Time Period'),],
         default='ongoing',
         required=True,
         tracking=True,
         track_visibility='always',
         help="Select wether the project has a conrete period with a start end end date or is ongoing",
     )
-    date_start = fields.Date(string='Start Date'
+    date_start = fields.Date(
+        string='Start Date'
     )
-    date_end = fields.Date(string='End Date'
+    date_end = fields.Date(
+        string='End Date'
     )
     engagement_default_duration = fields.Integer(
         default=1,
@@ -64,8 +65,8 @@ class VolunteerProject(models.Model):
         help="Specify duration type for engagement default duration.",
     )
     engagement_ids = fields.One2many(
-        'volunteer.engagement',
-        'volunteer_project_id',
+        comodel_name='volunteer.engagement',
+        inverse_name='volunteer_project_id',
         string='Engagements',
     )
 
@@ -75,13 +76,14 @@ class VolunteerProject(models.Model):
             if vals.get('sequence', '/') == '/':
                 vals['sequence'] = self.env['ir.sequence'].next_by_code('volunteer.project')
         return super(VolunteerProject, self).create(vals_list)
-
+    
     @api.multi
     def copy(self, default=None):
-        if default is None:
-            default = {}
-        default['sequence'] = self.env['ir.sequence'].next_by_code('volunteer.project')
-        return super(VolunteerProject, self).copy(default)
+        for res in self:
+            if default is None:
+                default = {}
+            default['sequence'] = res.env['ir.sequence'].next_by_code('volunteer.project')
+            return super(VolunteerProject, res).copy(default)
 
     @api.constrains('date_start', 'date_end')
     def _check_default_date_start_ends(self):
@@ -93,13 +95,13 @@ class VolunteerProject(models.Model):
                 % self.display_name)
 
     @api.onchange('date_start')
-    def date_start_change(self):
+    def _onchange_date_start(self):
         if (self.date_start and self.date_end and
                 self.date_start > self.date_end):
             self.date_end = self.date_start
 
     @api.onchange('date_end')
-    def date_end_change(self):
+    def _onchange_date_end(self):
         if (self.date_start and self.date_end and
                 self.date_start > self.date_end):
             self.date_start = self.date_end    

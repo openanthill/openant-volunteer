@@ -8,16 +8,16 @@ class ResPartner(models.Model):
     _inherit = 'res.partner'
 
     engagement_ids = fields.One2many(
-        'volunteer.engagement',
-        'partner_id',
+        comodel_name='volunteer.engagement',
+        inverse_name='partner_id',
         string='Engagements',
     )
     engagement_count = fields.Integer(
         string='Engagement Count',
-        compute='_compute_engagemnet_count',
+        compute='_compute_engagement_count',
     )
 
     @api.depends('engagement_ids')
-    def _compute_engagemnet_count(self):
+    def _compute_engagement_count(self):
         for partner in self:
             partner.engagement_count = len(partner.engagement_ids.ids)

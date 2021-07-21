@@ -15,7 +15,8 @@ class VolunteerEngagement(models.Model):
 
     name = fields.Char(
         string='Engagement Reference',
-        required=True, default="/",
+        required=True,
+        default="/",
         readonly=True
     )
     partner_id = fields.Many2one(
@@ -29,7 +30,7 @@ class VolunteerEngagement(models.Model):
         help="The volunteer which is supporting the organisation with an engagement."
     )
     volunteer_project_id = fields.Many2one(
-        string='Projekt',
+        string='Project',
         comodel_name='volunteer.project',
         required=True,
         tracking=True,
@@ -102,54 +103,59 @@ class VolunteerEngagement(models.Model):
 
     @api.model_create_multi
     def create(self, vals_list):
-        for vals in vals_list:
-            if vals.get('name', '/') == '/':
-                vals['name'] = self.env['ir.sequence'].next_by_code('volunteer.engagement')
-        return super(VolunteerEngagement, self).create(vals_list)
+        new_volunteer_engagements = super(VolunteerEngagement, self).create(vals_list)
+        for volunteer_engagement in new_volunteer_engagements:
+            if volunteer_engagement.name is False or volunteer_engagement.name == "/":
+                volunteer_engagement.name = self.env['ir.sequence'].next_by_code('volunteer.engagement')
+        return new_volunteer_engagements
 
     @api.multi
     def copy(self, default=None):
-        if default is None:
-            default = {}
-        default['name'] = self.env['ir.sequence'].next_by_code('volunteer.engagement')
-        return super(VolunteerEngagement, self).copy(default)
+        for res in self:
+            if default is None:
+                default = {}
+            default['name'] = res.env['ir.sequence'].next_by_code('volunteer.engagement')
+            return super(VolunteerEngagement, res).copy(default)
 
     @api.multi
     def action_volunteer_engagement_active(self):
-        if self.state == 'new':
-            project = self.volunteer_project_id
-            if project.timeframe == 'ongoing':
-                date_start = fields.Date.today()
-                date_end = fields.Date.today() + self.get_relative_delta(
-                project.engagement_default_duration_type, project.engagement_default_duration)
-            elif project.timeframe == 'period':
-                date_start = datetime.combine(project.date_start, time.min)
-                date_end = datetime.combine(project.date_end, time.min)
+        for res in self:
+            if res.state == 'new':
+                project = res.volunteer_project_id
+                if project.timeframe == 'ongoing':
+                    date_start = fields.Date.today()
+                    date_end = fields.Date.today() + res.get_relative_delta(
+                    project.engagement_default_duration_type, project.engagement_default_duration)
+                elif project.timeframe == 'period':
+                    date_start = datetime.combine(project.date_start, time.min)
+                    date_end = datetime.combine(project.date_end, time.min)
 
-            self.write({
-                'state': 'active',
-                'start_date': date_start,
-                'end_date': date_end})
+                res.write({
+                    'state': 'active',
+                    'start_date': date_start,
+                    'end_date': date_end})
 
     @api.multi
     def action_volunteer_engagement_success(self):
-        self.write({
-            'state': 'success',
-            'end_date': fields.Date.today()
-        })
+        for res in self:
+            res.write({
+                'state': 'success',
+                'end_date': fields.Date.today()
+            })
         
     @api.multi
     def action_volunteer_engagement_reset(self):
-        return self.write({'state': 'new'})
+        for res in self:
+            return res.write({'state': 'new'})
 
     @api.onchange('start_date', 'end_date')
     def _onchange_start_end_date(self):
-        if self.start_date != False and self.end_date != False:
+        if self.start_date is not False and self.end_date is not False:
             if self.end_date < self.start_date:
                 raise ValidationError('The End Date must be after the Start Date.')
 
     @api.onchange('volunteer_project_id')
-    def onchange_volunteer_project_id(self):
+    def _onchange_volunteer_project_id(self):
         if not self.volunteer_project_id:
             self.start_date = False
             self.end_date = False            
