@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo noupdate="1">
+
+<!-- Demo Volunteer Partners -->
+    <record id="demo_volunteer_partner_tim_oelze" model="res.partner">
+        <field name="company_type">person</field>
+        <field name="name">Tim Oelze</field>
+        <field name="street">Helderstrasse 7</field>
+        <field name="city">Bremen</field>
+        <field name="zip">33765</field>
+        <field name="country_id" ref="base.de"/>
+        <field name="function">Student</field>
+        <field name="phone">(490)-853-7597</field>
+        <field name="mobile">+49 17675975958</field>
+        <field name="email">timoelze@timoelze.org</field>
+        <field name="website">http://www.timoelzevolunteer.org</field>
+        <field name="image" type="base64" file="volunteer_base/static/img/res_partner_tim_oelze.jpg"/>
+    </record>
+
+    <record id="demo_volunteer_partner_elba_garcia" model="res.partner">
+        <field name="company_type">person</field>
+        <field name="name">Elba Gracia</field>
+        <field name="street">Carrer de la Calzinera 96</field>
+        <field name="city">Ordino</field>
+        <field name="zip">AD300</field>
+        <field name="country_id" ref="base.ad"/>
+        <field name="function">Product Manager</field>
+        <field name="phone"> 376 853199</field>
+        <field name="mobile">011 244955 741 112</field>
+        <field name="email">elbagarcia@garciaelba.org</field>
+        <field name="website">http://www.elbagarciaexample.org</field>
+        <field name="image" type="base64" file="volunteer_base/static/img/res_partner_elba_garcia.jpg"/>
+    </record>
+
+    <record id="demo_volunteer_partner_marija_novak" model="res.partner">
+        <field name="company_type">person</field>
+        <field name="name">Marija Novak</field>
+        <field name="street">Trg revolucije 852</field>
+        <field name="city">Ljubljana</field>
+        <field name="zip">8294</field>
+        <field name="country_id" ref="base.si"/>
+        <field name="function">Tourist Guide</field>
+        <field name="phone">386-785-8538</field>
+        <field name="mobile">01 8242529</field>
+        <field name="email">infonovak@novakinfo.org</field>
+        <field name="image" type="base64" file="volunteer_base/static/img/res_partner_marija_novak.jpg"/>
+    </record>
+
+    <record id="demo_volunteer_partner_clark_jones" model="res.partner">
+        <field name="company_type">person</field>
+        <field name="name">Clark Jones</field>
+        <field name="street">156 Maple Boulevard</field>
+        <field name="city">Wellington</field>
+        <field name="zip">4122</field>
+        <field name="country_id" ref="base.nz"/>
+        <field name="function">Surfer</field>
+        <field name="phone">+64-852-7946</field>
+        <field name="mobile">0889 85654</field>
+        <field name="email">clarkjones@infojonesoinfo.org</field>
+        <field name="image" type="base64" file="volunteer_base/static/img/res_partner_clark_jones.jpg"/>
+    </record>
+
+    <record id="demo_volunteer_partner_manuel_joao" model="res.partner">
+        <field name="company_type">person</field>
+        <field name="name">Manuel Joao</field>
+        <field name="street">Rua Frederik Engels 929</field>
+        <field name="city">Huambo</field>
+        <field name="zip">04120</field>
+        <field name="country_id" ref="base.ao"/>
+        <field name="function">Baker</field>
+        <field name="phone">+241-951-1597</field>
+        <field name="mobile">244 854 888 965</field>
+        <field name="email">manueljoaomanuel@manueljoaojoao.org</field>
+        <field name="image" type="base64" file="volunteer_base/static/img/res_partner_manuel_joao.jpg"/>
+    </record>
+    
+</odoo>

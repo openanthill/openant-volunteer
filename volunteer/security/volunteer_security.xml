@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  © 2021 humanilog (www.humanilog.org)
+  License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+
+<odoo noupdate="0">
+
+    <record id="module_category_volunteer" model="ir.module.category">
+        <field name="name">Volunteer</field>
+        <field name="description">Manage volunteers</field>
+        <field name="sequence">48</field>
+    </record>
+
+    <record id="group_volunteer_viewer" model="res.groups">
+        <field name="name">Viewer</field>
+        <field name="category_id" ref="module_category_volunteer"/>
+    </record>
+
+    <record id="group_volunteer_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id" ref="module_category_volunteer"/>
+        <field name="implied_ids" eval="[(4, ref('group_volunteer_viewer'))]"/>
+    </record>
+
+    <record id="group_volunteer_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="module_category_volunteer"/>
+        <field name="implied_ids" eval="[(4, ref('group_volunteer_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+    </record>
+    
+</odoo>

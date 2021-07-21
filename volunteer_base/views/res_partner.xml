@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+  © 2020 humanilog (https://www.humanilog.org)
+  License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+
+<odoo>
+
+<!-- Window Actions -->
+    <record id="partner_engagement_action" model="ir.actions.act_window">
+        <field name="name">Volunteer Engagements</field>
+        <field name="res_model">volunteer.engagement</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_partner_id': active_id}</field>
+    </record>
+
+<!-- Partner view inheritances -->
+    <record id="view_partner_form_volunteer_base" model="ir.ui.view">
+        <field name="name">view.partner.form.volunteer.base</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button class="oe_stat_button" type="action"
+                    name="%(volunteer_base.partner_engagement_action)d"
+                    attrs="{'invisible': [('is_company', '=', True)]}"
+                    icon="fa-address-card-o">
+                    <field string="Engagements" name="engagement_count" widget="statinfo"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

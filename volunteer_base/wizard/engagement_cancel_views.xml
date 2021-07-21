@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+  © 2021 humanilog (https://www.humanilog.org)
+  License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+
+<odoo>
+        <record id="volunteer_engagement_cancel_view_form" model="ir.ui.view">
+            <field name="name">volunteer.engagement.cancel.view.form</field>
+            <field name="model">engagement.cancelled</field>
+            <field name="arch" type="xml">
+                <form string="Lost Reason">
+                    <group class="oe_title">
+                        <field name="cancel_reason_id"/>
+                    </group>
+                    <footer>
+                        <button name="action_cancel_reason_apply" string="Submit" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="volunteer_engagement_cancel_action" model="ir.actions.act_window">
+            <field name="name">Cancel Reason</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">engagement.cancelled</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="volunteer_engagement_cancel_view_form"/>
+            <field name="target">new</field>
+        </record>
+        
+</odoo>

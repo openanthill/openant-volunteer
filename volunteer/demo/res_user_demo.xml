@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  © 2021 humanilog (https://www.humanilog.org)
+  License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+
+<odoo noupdate="1">
+
+    <record id="base.user_admin" model="res.users">
+        <field name="groups_id" eval="[(4, ref('group_volunteer_manager'))]"/>
+    </record>
+
+    <record id="base.user_demo" model="res.users">
+        <field name="groups_id" eval="[(4, ref('group_volunteer_user'))]"/>
+    </record>
+
+</odoo>
