@@ -12,9 +12,10 @@ class EngagementCancelled(models.TransientModel):
 
     @api.multi
     def action_cancel_reason_apply(self):
-        engagement = self.env['volunteer.engagement'].browse(self.env.context.get('active_id'))
-        engagement.write({
-            'cancel_reason': self.cancel_reason_id.id,
-            'state': 'cancel',
-            'end_date': fields.Date.today()
-        })        
+        for res in self:
+            engagement = res.env['volunteer.engagement'].browse(res.env.context.get('active_id'))
+            engagement.write({
+                'cancel_reason': res.cancel_reason_id.id,
+                'state': 'cancel',
+                'end_date': fields.Date.today()
+            })

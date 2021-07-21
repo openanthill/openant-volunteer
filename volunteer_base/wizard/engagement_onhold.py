@@ -12,8 +12,9 @@ class EngagementOnhold(models.TransientModel):
 
     @api.multi
     def action_onhold_reason_apply(self):
-        engagement = self.env['volunteer.engagement'].browse(self.env.context.get('active_id'))
-        engagement.write({
-            'onhold_reason': self.onhold_reason_id.id,
-            'state': 'onhold'
-        })        
+        for res in self:
+            engagement = res.env['volunteer.engagement'].browse(res.env.context.get('active_id'))
+            engagement.write({
+                'onhold_reason': res.onhold_reason_id.id,
+                'state': 'onhold'
+            })        
