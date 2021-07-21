@@ -35,7 +35,7 @@
         <field name="name">High workload in fulltime job</field>    
     </record>
 
-    <record id="engagement_cancel_reason_change_residency" model="engagement.onhold.reason">
+    <record id="engagement_onhold_reason_change_residency" model="engagement.onhold.reason">
         <field name="name">Change of residency</field>    
     </record>
 

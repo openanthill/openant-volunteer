@@ -5,17 +5,17 @@
     <record id="volunteer_project_collecting-donations_at_the_christmas_market" model="volunteer.project">
         <field name="name"> Collecting donations at the Christmas Market</field>
         <field name="partner_id" ref="demo_volunteer_partner_marija_novak"/>   
-        <field name ="timeframe">period</field>
+        <field name="timeframe">period</field>
         <field name="date_start" eval="(DateTime.today() - relativedelta(weeks=7)).strftime('%Y-%m-%d %H:%M')"/>
         <field name="date_end" eval="(DateTime.today() + relativedelta(weeks=1)).strftime('%Y-%m-%d %H:%M')"/>
-        <field name ="location_type">single</field>
+        <field name="location_type">single</field>
     </record>
 
     <record id="volunteer_project_welldrilling" model="volunteer.project">
         <field name="name"> Welldrilling</field>
-        <field name ="timeframe">ongoing</field>
+        <field name="timeframe">ongoing</field>
         <field name="partner_id" ref="demo_volunteer_partner_manuel_joao"/>
-        <field name ="location_type">various</field>
+        <field name="location_type">various</field>
     </record>
     
 </odoo>
