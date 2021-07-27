@@ -1,0 +1,813 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* volunteer_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20201123\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-22 11:15+0000\n"
+"PO-Revision-Date: 2021-07-22 17:03+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: \n"
+"Language: de_DE\n"
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__state
+msgid ""
+" * The 'New' status is the default when an engagement is created.\n"
+" * The 'Active' status is used when the volunteer is actively working in the "
+"engagement.\n"
+" * The 'On Hold' status is used when the volunteer is pausing his activities "
+"in an engagemen.\n"
+" * The 'Successful' status is set when the volunteer has successfully ended "
+"to engagement.\n"
+" * The 'Cancelled' status is used when a volunteer has aborted an "
+"engagnement befor successfully ending it."
+msgstr ""
+" * Der Status \"Neu\" ist die Standardeinstellung, wenn ein Engagement "
+"erstellt wird.\n"
+" * Der Status \"Aktiv\" wird verwendet, wenn  die*der Freiwillige aktiv am "
+"Engagement arbeitet.\n"
+" * Der Status \"In der Warteschleife\" wird verwendet, wenn die*der "
+"Freiwillige seine Aktivitäten in einem Engagemen pausiert.\n"
+" * Der Status \"Absolviert\" wird festgelegt, wenn die*der Freiwillige das "
+"Engagement erfolgreich beendet hat.\n"
+" * Der Status \"Beendet\" wird verwendet, wenn ein*e Freiwillige*r ein "
+"Engagement abgebrochen hat, bevor es erfolgreich beendet wurde."
+
+#. module: volunteer_base
+#: model:volunteer.project,name:volunteer_base.volunteer_project_collecting-donations_at_the_christmas_market
+msgid " Collecting donations at the Christmas Market"
+msgstr " Spendenaktion auf dem Weihnachtsmarkt"
+
+#. module: volunteer_base
+#: model:volunteer.project,name:volunteer_base.volunteer_project_welldrilling
+msgid " Welldrilling"
+msgstr " Brunnenbau"
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_view_form_base
+msgid "Accomplished"
+msgstr "Absolviert"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_needaction
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_needaction
+msgid "Action Needed"
+msgstr "Aktion erforderlich"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancel_reason__active
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_onhold_reason__active
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__active
+#: selection:volunteer.engagement,state:0
+msgid "Active"
+msgstr "Aktiv"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__activity_ids
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__activity_ids
+msgid "Activities"
+msgstr "Aktivitäten"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__activity_state
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__activity_state
+msgid "Activity State"
+msgstr "Status"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_attachment_count
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_attachment_count
+msgid "Attachment Count"
+msgstr "Zahl der Anhänge"
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_cancel_view_form
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_onhold_view_form
+msgid "Cancel"
+msgstr "Beenden"
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_view_form_base
+msgid "Cancel Engagement"
+msgstr "Engagement beenden"
+
+#. module: volunteer_base
+#: model:ir.actions.act_window,name:volunteer_base.volunteer_engagement_cancel_action
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancelled__cancel_reason_id
+msgid "Cancel Reason"
+msgstr "Beendigungsgrund"
+
+#. module: volunteer_base
+#: model:ir.actions.act_window,name:volunteer_base.engagement_cancel_reason_action
+#: model_terms:ir.ui.view,arch_db:volunteer_base.engagement_cancel_reason_view_form
+#: model_terms:ir.ui.view,arch_db:volunteer_base.engagement_cancel_reason_view_search
+msgid "Cancel Reasons"
+msgstr "Beendigungsgründe"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__date_cancel
+msgid "Cancel date"
+msgstr "Beendigungsatum"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__cancel_reason_id
+msgid "Cancel reason"
+msgstr "Beendigungsgrund"
+
+#. module: volunteer_base
+#: selection:volunteer.engagement,state:0
+msgid "Cancelled"
+msgstr "Beendet"
+
+#. module: volunteer_base
+#: model:engagement.cancel.reason,name:volunteer_base.engagement_cancel_reason_change_residency
+#: model:engagement.onhold.reason,name:volunteer_base.engagement_onhold_reason_change_residency
+msgid "Change of residency"
+msgstr "Wohnungswechsel"
+
+#. module: volunteer_base
+#: model:ir.model,name:volunteer_base.model_res_config_settings
+msgid "Config Settings"
+msgstr "Einstellungen konfigurieren"
+
+#. module: volunteer_base
+#: model:ir.model,name:volunteer_base.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: volunteer_base
+#: model_terms:ir.actions.act_window,help:volunteer_base.volunteer_engagement_action
+msgid "Create a new engagemens for volunteers."
+msgstr "Neues Engagement anlegen."
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancel_reason__create_uid
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancelled__create_uid
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_onhold__create_uid
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_onhold_reason__create_uid
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__create_uid
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__create_uid
+msgid "Created by"
+msgstr "Angelegt von"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancel_reason__create_date
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancelled__create_date
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_onhold__create_date
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_onhold_reason__create_date
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__create_date
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__create_date
+msgid "Created on"
+msgstr "Angelegt am"
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__date_cancel
+msgid "Date when Volunteer requested to cancel the engagement"
+msgstr "Datum der Beendigungsanfrage"
+
+#. module: volunteer_base
+#: selection:volunteer.project,engagement_default_duration_type:0
+msgid "Day(s)"
+msgstr "Tag(e)"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__engagement_default_duration
+msgid "Default Duration"
+msgstr "Standarddauer"
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_project__engagement_default_duration
+msgid ""
+"Default duration for engagements created for this project.\n"
+"This timeframe will be used for computation of start and end dates"
+msgstr ""
+"Standarddauer von Engagements für dieses Projekt.\n"
+"Dieser Zeitraum wird für die Berechnung von Start-und Enddaten verwendet"
+
+#. module: volunteer_base
+#: model_terms:ir.actions.act_window,help:volunteer_base.engagement_cancel_reason_action
+msgid "Define a new Cancel reason"
+msgstr "Neuen Beendigungsgrund definieren"
+
+#. module: volunteer_base
+#: model_terms:ir.actions.act_window,help:volunteer_base.engagement_onhold_reason_action
+msgid "Define a new on hold reason"
+msgstr "Neuen On-hold-Grund definieren"
+
+#. module: volunteer_base
+#: model:engagement.onhold.reason,name:volunteer_base.engagement_onhold_reason_disease
+msgid "Disease"
+msgstr "Krankheit"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancel_reason__display_name
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancelled__display_name
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_onhold__display_name
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_onhold_reason__display_name
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__display_name
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__display_name
+msgid "Display Name"
+msgstr "Name anzeigen"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__engagement_default_duration_type
+msgid "Duration Type"
+msgstr ""
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__date_end
+msgid "End Date"
+msgstr "Enddatum"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__end_date
+msgid "End date"
+msgstr "Enddatum"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_res_partner__engagement_count
+#: model:ir.model.fields,field_description:volunteer_base.field_res_users__engagement_count
+msgid "Engagement Count"
+msgstr "Engagementzähler"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__name
+msgid "Engagement Reference"
+msgstr "Engagementreferenz"
+
+#. module: volunteer_base
+#: model:engagement.cancel.reason,name:volunteer_base.engagement_cancel_reason_misfit
+msgid "Engagement does not fit"
+msgstr "Engagement passt nicht"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_res_partner__engagement_ids
+#: model:ir.model.fields,field_description:volunteer_base.field_res_users__engagement_ids
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__engagement_ids
+#: model_terms:ir.ui.view,arch_db:volunteer_base.view_partner_form_volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_project_view_form_base
+msgid "Engagements"
+msgstr "Engagements"
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_res_config_settings__engagement_onhold_days
+msgid ""
+"Enter the default amount of days for engagement on hold timeframes here.\n"
+"The amount of days will be used to compute the onhold until date in \n"
+"engagements when the onhold button is clicked."
+msgstr ""
+"Gib hier die Standardanzahl an Tagen für den On-hold-Zeitrahmen ein.  \n"
+"Die Anzahl der Tage wird verwendet, um das On-hold-Datum zu berechnen, wenn "
+"die On-hold-Taste gedrückt wird."
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_follower_ids
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_follower_ids
+msgid "Followers"
+msgstr "Follower"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_channel_ids
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Follower (Kanäle)"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_partner_ids
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Follower (Partner)"
+
+#. module: volunteer_base
+#: model:ir.model,name:volunteer_base.model_engagement_cancelled
+msgid "Get Lost Reason"
+msgstr ""
+
+#. module: volunteer_base
+#: model:ir.model,name:volunteer_base.model_engagement_onhold
+msgid "Get On hold Reason"
+msgstr "On Hold-Grund erhalten"
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_search
+msgid "Group By"
+msgstr "Gruppieren nach"
+
+#. module: volunteer_base
+#: model:engagement.cancel.reason,name:volunteer_base.engagement_cancel_reason_high_workload
+#: model:engagement.onhold.reason,name:volunteer_base.engagement_onhold_reason_high_workload
+msgid "High workload in fulltime job"
+msgstr "Hohe Arbeitsbelastung im Vollzeitjob"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancel_reason__id
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancelled__id
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_onhold__id
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_onhold_reason__id
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__id
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__id
+msgid "ID"
+msgstr "ID"
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__message_unread
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_project__message_unread
+msgid "If checked new messages require your attention."
+msgstr "Wenn Haken gesetzt: Neue Nachrichten vorhanden."
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__message_needaction
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_project__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Wenn Haken gesetzt: Neue Nachrichten vorhanden."
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__message_has_error
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_project__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+"Wenn Haken gesetzt: Manche Nachrichten haben einen Übermittlungsfehler."
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__state_onhold_until
+msgid "In this field that date when a volunteering engagmeent was set on hold"
+msgstr ""
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__end_date
+msgid "In this field the end date of an engagement can be saved."
+msgstr "In diesem Feld kann das Enddatum eines Engagements gespeichert werden."
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__start_date
+msgid "In this field the start date of an engagement can be saved."
+msgstr ""
+"In diesem Feld kann das Startdatum eines Engagements gespeichert werden."
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.engagement_cancel_reason_view_search
+#: model_terms:ir.ui.view,arch_db:volunteer_base.engagement_onhold_reason_view_search
+msgid "Include archived"
+msgstr "Archivierte einbeziehen"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_is_follower
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_is_follower
+msgid "Is Follower"
+msgstr "Ist Follower"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancel_reason____last_update
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancelled____last_update
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_onhold____last_update
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_onhold_reason____last_update
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement____last_update
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project____last_update
+msgid "Last Modified on"
+msgstr "Zuletzt geändert"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancel_reason__write_uid
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancelled__write_uid
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_onhold__write_uid
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_onhold_reason__write_uid
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__write_uid
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__write_uid
+msgid "Last Updated by"
+msgstr "Zuletzt aktualisiert"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancel_reason__write_date
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancelled__write_date
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_onhold__write_date
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_onhold_reason__write_date
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__write_date
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__write_date
+msgid "Last Updated on"
+msgstr "Zuletzt aktualisiert"
+
+#. module: volunteer_base
+#: model:engagement.cancel.reason,name:volunteer_base.engagement_cancel_reason_interest_loss
+msgid "Loss of interest"
+msgstr "Kein Interesse mehr"
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_cancel_view_form
+msgid "Lost Reason"
+msgstr "Grund für Abbruch"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_main_attachment_id
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_has_error
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_has_error
+msgid "Message Delivery error"
+msgstr "Übermittlungsfehler"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_ids
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_ids
+msgid "Messages"
+msgstr "Nachrichten"
+
+#. module: volunteer_base
+#: selection:volunteer.project,engagement_default_duration_type:0
+msgid "Month(s)"
+msgstr "Monat(e)"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancel_reason__name
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_onhold_reason__name
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__name
+msgid "Name"
+msgstr "Name"
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_project__name
+msgid "Name of the volunteer project"
+msgstr "Name des Engagementprojekts"
+
+#. module: volunteer_base
+#: selection:volunteer.engagement,state:0
+msgid "New"
+msgstr "Neu"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__activity_date_deadline
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Nächste Aktivitätsfrist"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__activity_summary
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__activity_summary
+msgid "Next Activity Summary"
+msgstr "Nächste Aktivitätszusammenfassung"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__activity_type_id
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__activity_type_id
+msgid "Next Activity Type"
+msgstr "Nächster Aktivitätstyp"
+
+#. module: volunteer_base
+#: model:engagement.cancel.reason,name:volunteer_base.engagement_cancel_reason_no_response
+msgid "No response"
+msgstr "Keine Antwort"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_needaction_counter
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Anzahl der Aktionen"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_has_error_counter
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_has_error_counter
+msgid "Number of error"
+msgstr "Fehlernummer"
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__message_needaction_counter
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_project__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Anzahl der Nachrichten, die eine Aktion verlangen"
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__message_has_error_counter
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_project__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Anzahl der Nachrichten mit Übermittlungsfehler"
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__message_unread_counter
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_project__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Anzahl ungelesener Nachrichten"
+
+#. module: volunteer_base
+#: selection:volunteer.engagement,state:0
+msgid "On Hold"
+msgstr "On Hold"
+
+#. module: volunteer_base
+#: model:ir.actions.act_window,name:volunteer_base.volunteer_engagement_onhold_action
+#: model:ir.model.fields,field_description:volunteer_base.field_engagement_onhold__onhold_reason_id
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_onhold_view_form
+msgid "On hold Reason"
+msgstr "On Hold-Grund"
+
+#. module: volunteer_base
+#: model:ir.actions.act_window,name:volunteer_base.engagement_onhold_reason_action
+#: model_terms:ir.ui.view,arch_db:volunteer_base.engagement_onhold_reason_view_form
+#: model_terms:ir.ui.view,arch_db:volunteer_base.engagement_onhold_reason_view_search
+msgid "On hold Reasons"
+msgstr "On Hold-Gründe"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_res_config_settings__engagement_onhold_days
+msgid "On hold default days"
+msgstr "Voreingestellte On Hold-Tage"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__onhold_reason_id
+msgid "On hold reason"
+msgstr "On Hold-Grund"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__state_onhold_until
+msgid "On hold until"
+msgstr "On Hold bis"
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_view_form_base
+msgid "On-Hold"
+msgstr "On Hold"
+
+#. module: volunteer_base
+#: selection:volunteer.project,timeframe:0
+msgid "Ongoing"
+msgstr "Laufend"
+
+#. module: volunteer_base
+#: selection:volunteer.engagement,activity_state:0
+#: selection:volunteer.project,activity_state:0
+msgid "Overdue"
+msgstr "Überfällig"
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_search
+msgid "Partner"
+msgstr "Partner"
+
+#. module: volunteer_base
+#: selection:volunteer.engagement,activity_state:0
+#: selection:volunteer.project,activity_state:0
+msgid "Planned"
+msgstr "Geplant"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__volunteer_project_id
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_view_form_base
+msgid "Project"
+msgstr "Projekt"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__description
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_project_view_form_base
+msgid "Project Description"
+msgstr "Projektbeschreibung"
+
+#. module: volunteer_base
+#: model:engagement.onhold.reason,name:volunteer_base.engagement_onhold_reason_project_timeout
+msgid "Project Timeout"
+msgstr "Projektende"
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_project_view_form_base
+msgid "Project name..."
+msgstr "Projektname..."
+
+#. module: volunteer_base
+#: model:ir.actions.act_window,name:volunteer_base.volunteer_project_action
+msgid "Projects"
+msgstr "Projekte"
+
+#. module: volunteer_base
+#: model:ir.model,name:volunteer_base.model_engagement_cancel_reason
+msgid "Reasons for Volunteers to cancel engagements"
+msgstr "Beendigungsgründe"
+
+#. module: volunteer_base
+#: model:ir.model,name:volunteer_base.model_engagement_onhold_reason
+msgid "Reasons for Volunteers to put engagements on hold"
+msgstr "On Hold-Gründe"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__sequence
+msgid "Reference"
+msgstr "Referenz"
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_view_form_base
+msgid "Reset to New"
+msgstr "Zurücksetzen auf Neu"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__activity_user_id
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__activity_user_id
+msgid "Responsible User"
+msgstr "Verantwortliche*r Nutzer*in"
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_search
+msgid "Search Engagements"
+msgstr "Engagements suchen"
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_project__timeframe
+msgid ""
+"Select wether the project has a conrete period with a start end end date or "
+"is ongoing"
+msgstr ""
+"Auswählen, ob das Projekt eine konkrete Laufzeit mit Start- und Enddatum hat "
+"oder dauerhaft läuft"
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_project__sequence
+msgid "Sequence to identify volunteer projects easily"
+msgstr "Reihenfolge, um Engagementprojekte leicht zu identifizieren"
+
+#. module: volunteer_base
+#: model_terms:ir.actions.act_window,help:volunteer_base.engagement_cancel_reason_action
+msgid ""
+"Some examples of cancel reasons: \"Chaotic Organisation\", \"Lack of "
+"apreciation\""
+msgstr ""
+"Beispiele für Beendigungsgründe: \"Schlechte Organisation\", \"Mangel an "
+"Anerkennung\""
+
+#. module: volunteer_base
+#: model_terms:ir.actions.act_window,help:volunteer_base.engagement_onhold_reason_action
+msgid "Some examples of on hold reasons: \"travelling\", \"personal\""
+msgstr "Beispiele für On Hold-Gründe: \"unterwegs\", \"persönlich\""
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_project__engagement_default_duration_type
+msgid "Specify duration type for engagement default duration."
+msgstr ""
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_view_form_base
+msgid "Start"
+msgstr "Start"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__date_start
+msgid "Start Date"
+msgstr "Startdatum"
+
+#. module: volunteer_base
+#: code:addons/volunteer_base/models/volunteer_project.py:92
+#, python-format
+msgid ""
+"Start Date should be before or be the same as End Date for Projects '%s'."
+msgstr "Startdatum eines Projektes sollte vor dem Enddatum liegen '%s'."
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__start_date
+msgid "Start date"
+msgstr "Startdatum"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__state
+msgid "State"
+msgstr "Staat"
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__activity_state
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_project__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status bezogen auf Aktivititäten\n"
+"Überfällig: Frist ist abgelaufen\n"
+"Heute: Datum der Aktivität ist heute\n"
+"Geplant: Zukünftige Aktivitäten."
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_cancel_view_form
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_onhold_view_form
+msgid "Submit"
+msgstr "Absenden"
+
+#. module: volunteer_base
+#: selection:volunteer.engagement,state:0
+msgid "Sucessful"
+msgstr "Erfolgreich"
+
+#. module: volunteer_base
+#: sql_constraint:volunteer.engagement:0
+msgid "The Engagement Reference must be unique!"
+msgstr "Die Engagementreferenz muss eindeutig sein!"
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_project__active
+msgid "The active field allows you to hide the project without removing it."
+msgstr ""
+"Das aktive Feld erlaubt es, das Projekt auszublenden ohne es zu entfernen."
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__cancel_reason_id
+msgid "The reason why a volunteer caneceled an engagement"
+msgstr "Beendigungsgrund"
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__onhold_reason_id
+msgid "The reason why a volunteer puts an engagement on hold"
+msgstr "On Hold-Grund"
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__partner_id
+msgid "The volunteer which is supporting the organisation with an engagement."
+msgstr ""
+"Die*der Freiwillige, die*der die Organisation mit einem Engagement "
+"unterstützt."
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_view_form_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_project_view_form_base
+msgid "Time Details"
+msgstr "Zeitliche Details"
+
+#. module: volunteer_base
+#: selection:volunteer.project,timeframe:0
+msgid "Time Period"
+msgstr "Zeitraum"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__timeframe
+msgid "Timeframe"
+msgstr "Zeitrahmen"
+
+#. module: volunteer_base
+#: selection:volunteer.engagement,activity_state:0
+#: selection:volunteer.project,activity_state:0
+msgid "Today"
+msgstr "Heute"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_unread
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_unread
+msgid "Unread Messages"
+msgstr "Ungelesene Nachrichten"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_unread_counter
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: volunteer_base
+#: model_terms:ir.actions.act_window,help:volunteer_base.engagement_cancel_reason_action
+msgid ""
+"Use cancel reasons to explain why an engagement was canceled by an volunteer."
+msgstr ""
+"Benutze Beendigungsgründe, um zu erläutern, warum ein Engagement von einer*m "
+"Engagierten beendet wurde."
+
+#. module: volunteer_base
+#: model_terms:ir.actions.act_window,help:volunteer_base.engagement_onhold_reason_action
+msgid ""
+"Use on hold reasons to explain why an engagement was put on hold by an "
+"volunteer."
+msgstr ""
+"Benutze On Hold-Gründe, um zu erläutern, warum ein Engagement von einer*m "
+"Engagierten pausiert wurde."
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__partner_id
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_search
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_view_form_base
+msgid "Volunteer"
+msgstr "Engagierte*r"
+
+#. module: volunteer_base
+#: model:ir.actions.act_window,name:volunteer_base.partner_engagement_action
+#: model:ir.actions.act_window,name:volunteer_base.volunteer_engagement_action
+#: model:ir.model,name:volunteer_base.model_volunteer_engagement
+msgid "Volunteer Engagements"
+msgstr "Engagements"
+
+#. module: volunteer_base
+#: model:ir.model,name:volunteer_base.model_volunteer_project
+msgid "Volunteer Projects"
+msgstr "Engagementprojekte"
+
+#. module: volunteer_base
+#: selection:volunteer.project,engagement_default_duration_type:0
+msgid "Week(s)"
+msgstr "Woche(n)"
+
+#. module: volunteer_base
+#: model_terms:ir.actions.act_window,help:volunteer_base.volunteer_engagement_action
+msgid ""
+"openAnt helps you to easily track all activities related to an engagment."
+msgstr ""
+"openAnt hilft dir, alle auf ein Engagement bezogenen Aktivitäten zu "
+"verfolgen."
