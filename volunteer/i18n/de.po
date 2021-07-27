@@ -1,0 +1,111 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* volunteer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20201123\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-22 11:29+0000\n"
+"PO-Revision-Date: 2021-07-22 17:19+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: \n"
+"Language: de\n"
+
+#. module: volunteer
+#: model_terms:ir.ui.view,arch_db:volunteer.res_config_settings_view_form_volunteer
+msgid ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\" role=\"img\" aria-label=\"Values set here are company-specific."
+"\" groups=\"base.group_multi_company\"/>"
+msgstr ""
+
+#. module: volunteer
+#: model:ir.ui.menu,name:volunteer.volunteer_config_menu
+msgid "Configuration"
+msgstr "Konfiguration"
+
+#. module: volunteer
+#: model_terms:ir.actions.act_window,help:volunteer.action_partner_volunteer_form
+msgid "Create a new volunteers in your address book"
+msgstr "Neue*n Engagierte*n im Adressbuch erstellen"
+
+#. module: volunteer
+#: model:ir.ui.menu,name:volunteer.engegement_cancel_reason_menu
+msgid "Engagement cancel reasons"
+msgstr "Beendigungsgründe"
+
+#. module: volunteer
+#: model:ir.ui.menu,name:volunteer.engegement_onhold_reason_menu
+msgid "Engagement on hold reasons"
+msgstr "On Hold-Gründe"
+
+#. module: volunteer
+#: model:ir.ui.menu,name:volunteer.menu_volunteer_engagement
+#: model_terms:ir.ui.view,arch_db:volunteer.res_config_settings_view_form_volunteer
+msgid "Engagements"
+msgstr "Engagements"
+
+#. module: volunteer
+#: model:ir.module.category,description:volunteer.module_category_volunteer
+msgid "Manage volunteers"
+msgstr "Engagierte bearbeiten"
+
+#. module: volunteer
+#: model:res.groups,name:volunteer.group_volunteer_manager
+msgid "Manager"
+msgstr ""
+
+#. module: volunteer
+#: model_terms:ir.actions.act_window,help:volunteer.action_partner_volunteer_form
+msgid "Odoo helps you easily track all activities related to volunteers."
+msgstr ""
+"Odoo hilft dir, alle auf Engagierte bezogene Aktivitäten zu verfolgen."
+
+#. module: volunteer
+#: model:ir.ui.menu,name:volunteer.menu_volunteer_project
+msgid "Projects"
+msgstr "Projekte"
+
+#. module: volunteer
+#: model_terms:ir.ui.view,arch_db:volunteer.res_config_settings_view_form_volunteer
+msgid ""
+"Set default days for computation of on hold until dates in engagements..."
+msgstr ""
+"Standardanzahl von Tagen für die Berechnung von On Hold-Zeiträumen "
+"setzen..."
+
+#. module: volunteer
+#: model:ir.actions.act_window,name:volunteer.action_volunteer_configuration
+#: model:ir.ui.menu,name:volunteer.menu_volunteer_global_settings
+msgid "Settings"
+msgstr "Einstellungen"
+
+#. module: volunteer
+#: model:res.groups,name:volunteer.group_volunteer_user
+msgid "User"
+msgstr "Benutzer*in"
+
+#. module: volunteer
+#: model:res.groups,name:volunteer.group_volunteer_viewer
+msgid "Viewer"
+msgstr "Betrachtende Person"
+
+#. module: volunteer
+#: model:ir.module.category,name:volunteer.module_category_volunteer
+msgid "Volunteer"
+msgstr "Engagierte*r"
+
+#. module: volunteer
+#: model:ir.actions.act_window,name:volunteer.action_partner_volunteer_form
+#: model:ir.ui.menu,name:volunteer.menu_volunteers
+#: model:ir.ui.menu,name:volunteer.title_menu_volunteer
+#: model:ir.ui.menu,name:volunteer.volunteer_top_menu
+#: model_terms:ir.ui.view,arch_db:volunteer.res_config_settings_view_form_volunteer
+msgid "Volunteers"
+msgstr "Engagierte"
