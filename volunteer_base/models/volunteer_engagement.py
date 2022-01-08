@@ -129,8 +129,11 @@ class VolunteerEngagement(models.Model):
             if res.state == 'new':
                 project = res.volunteer_project_id
                 if project.timeframe == 'ongoing':
-                    date_start = fields.Date.today()
-                    date_end = fields.Date.today() + res.get_relative_delta(
+                    if not res.start_date:
+                        date_start = fields.Date.today()
+                    else:
+                        date_start = res.start_date
+                    date_end = date_start + res.get_relative_delta(
                     project.engagement_default_duration_type, project.engagement_default_duration)
                 elif project.timeframe == 'period':
                     date_start = datetime.combine(project.date_start, time.min)
