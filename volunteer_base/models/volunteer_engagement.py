@@ -55,6 +55,12 @@ class VolunteerEngagement(models.Model):
              " * The 'Successful' status is set when the volunteer has successfully ended to engagement.\n"
              " * The 'Cancelled' status is used when a volunteer has aborted an engagnement befor successfully ending it."
     )
+    user_id = fields.Many2one(
+        comodel_name='res.users',
+        string='Responsible Person',
+        track_visibility='onchange',
+        default=lambda self: self.env.user
+    )
     start_date = fields.Date(
         string='Start date',
         tracking=True,
