@@ -10,6 +10,8 @@
         <field name="city">Bremen</field>
         <field name="zip">33765</field>
         <field name="country_id" ref="base.de"/>
+        <field name="customer">0</field>
+        <field name="volunteer">1</field>
         <field name="function">Student</field>
         <field name="phone">(490)-853-7597</field>
         <field name="mobile">+49 17675975958</field>
@@ -25,6 +27,8 @@
         <field name="city">Ordino</field>
         <field name="zip">AD300</field>
         <field name="country_id" ref="base.ad"/>
+        <field name="customer">0</field>
+        <field name="volunteer">1</field>        
         <field name="function">Product Manager</field>
         <field name="phone"> 376 853199</field>
         <field name="mobile">011 244955 741 112</field>
@@ -40,6 +44,8 @@
         <field name="city">Ljubljana</field>
         <field name="zip">8294</field>
         <field name="country_id" ref="base.si"/>
+        <field name="customer">0</field>
+        <field name="volunteer">1</field>        
         <field name="function">Tourist Guide</field>
         <field name="phone">386-785-8538</field>
         <field name="mobile">01 8242529</field>
@@ -54,6 +60,8 @@
         <field name="city">Wellington</field>
         <field name="zip">4122</field>
         <field name="country_id" ref="base.nz"/>
+        <field name="customer">0</field>
+        <field name="volunteer">1</field>        
         <field name="function">Surfer</field>
         <field name="phone">+64-852-7946</field>
         <field name="mobile">0889 85654</field>
@@ -68,6 +76,8 @@
         <field name="city">Huambo</field>
         <field name="zip">04120</field>
         <field name="country_id" ref="base.ao"/>
+        <field name="customer">0</field>
+        <field name="volunteer">1</field>        
         <field name="function">Baker</field>
         <field name="phone">+241-951-1597</field>
         <field name="mobile">244 854 888 965</field>

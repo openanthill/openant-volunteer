@@ -7,6 +7,10 @@ from odoo import models, fields, api
 class ResPartner(models.Model):
     _inherit = 'res.partner'
 
+    volunteer = fields.Boolean(
+        string='Is a Volunteer',
+        help="Check this box if this contact is a volunteer.",
+    )
     engagement_ids = fields.One2many(
         comodel_name='volunteer.engagement',
         inverse_name='partner_id',

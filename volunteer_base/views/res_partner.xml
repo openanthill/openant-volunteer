@@ -20,6 +20,9 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
+            <xpath expr="//field[@name='type']" position="after">
+                <field name="volunteer" attrs="{'invisible': [('is_company', '=', True)]}"/>
+            </xpath>
             <xpath expr="//div[@name='button_box']" position="inside">
                 <button class="oe_stat_button" type="action"
                     name="%(volunteer_base.partner_engagement_action)d"
@@ -27,6 +30,17 @@
                     icon="fa-address-card-o">
                     <field string="Engagements" name="engagement_count" widget="statinfo"/>
                 </button>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_res_partner_filter_volunteer" model="ir.ui.view">
+        <field name="name">view.res.partner.filter.volunteer</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='supplier']" position="after">
+                <filter string="Volunteers" name="volunteer" domain="[('volunteer','=',True), ('parent_id', '=', False)]"/>
             </xpath>
         </field>
     </record>

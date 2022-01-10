@@ -4,7 +4,6 @@
 from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
 
-
 class VolunteerProject(models.Model):
     _name = 'volunteer.project'
     _inherit = ['mail.thread', 'mail.activity.mixin']
