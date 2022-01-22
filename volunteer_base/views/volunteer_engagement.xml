@@ -142,6 +142,21 @@
         </field>
     </record>
 
+    <record id="volunteer_engagement_base_view_pivot" model="ir.ui.view">
+        <field name="name">volunteer.engagement.base.view.pivot</field>
+        <field name="model">volunteer.engagement</field>
+        <field name="arch" type="xml">
+            <pivot> 
+                <field name="volunteer_project_id"/>
+                <field name="partner_id"/>
+                <field name="user_id"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="state_onhold_until"/>
+                <field name="state"/>
+            </pivot> 
+        </field> 
+    </record>
 
     <record id="volunteer_engagement_search" model="ir.ui.view">
         <field name="name">volunteer.engagement.search</field>
@@ -161,7 +176,7 @@
     <record id="volunteer_engagement_action" model="ir.actions.act_window">
         <field name="name">Volunteer Engagements</field>
         <field name="res_model">volunteer.engagement</field>
-        <field name="view_mode">tree,form,kanban</field>
+        <field name="view_mode">tree,form,kanban,pivot</field>
         <field name="search_view_id" ref="volunteer_engagement_search"/>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
