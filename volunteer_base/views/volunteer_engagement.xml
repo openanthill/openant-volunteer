@@ -16,25 +16,25 @@
                             type="object" 
                             string="Start"
                             class="oe_highlight"
-                            attrs="{'invisible': [('state', '!=', 'new'), ('state', '!=', 'onhold')]}"/>        
+                            attrs="{'invisible': [('state', '!=', '10-new'), ('state', '!=', '30-onhold')]}"/>        
                     <button string="On-Hold"
                             type="action"
                             name="%(volunteer_engagement_onhold_action)d"
-                            states="active"/>
+                            states="20-active"/>
                     <button name="action_volunteer_engagement_success"
                             type="object" 
                             string="Accomplished"
                             class="oe_highlight"
-                            states="active"/>                                                        
+                            states="20-active"/>                                                        
                     <button string="Cancel Engagement"
                             type="action"
                             name="%(volunteer_engagement_cancel_action)d" 
                             class="oe_highlight"
-                            attrs="{'invisible': ['|', ('state', '=', 'success'), ('state', '=', 'cancel')]}"/>
+                            attrs="{'invisible': ['|', ('state', '=', '40-success'), ('state', '=', '50-cancel')]}"/>
                     <button name="action_volunteer_engagement_reset"
                             type="object" 
                             string="Reset to New"
-                            attrs="{'invisible': [('state', '!=', 'success'), ('state', '!=', 'cancel')]}"/>                            
+                            attrs="{'invisible': [('state', '!=', '40-success'), ('state', '!=', '50-cancel')]}"/>                            
                     <field name="state" widget="statusbar"/>
                 </header>
                 <sheet>
@@ -45,7 +45,7 @@
                             <field name="name" attrs="{'invisible': [('name', '=', '/')]}"/>
                         </h1>
                     </div>
-                    <group name="engagement_info" attrs="{'readonly': ('state', 'in', ['success', 'cancel'])}">
+                    <group name="engagement_info" attrs="{'readonly': ('state', 'in', ['40-success', '50-cancel'])}">
                         <group name="volunteer" string="Volunteer">
                             <field name="partner_id"
                                    widget="res_partner_many2one"
@@ -56,11 +56,11 @@
                         <group name="project" string="Project">
                             <field name="volunteer_project_id"/>
                         </group>
-                        <group name="time_details" string="Time Details">
+                        <group name="time_details" string="Time Details" attrs="{'readonly': ('state', 'in', ['40-success', '50-cancel'])}">
                             <field name="start_date"/>
                             <field name="end_date"/>
                             <field name="state_onhold_until" 
-                                   attrs="{'invisible':[('state', '!=', 'onhold')], 'required':[('state', '=', 'onhold')]}"/>
+                                   attrs="{'invisible':[('state', '!=', '30-onhold')], 'required':[('state', '=', '30-onhold')]}"/>
                         </group>
                         <group name="responsibilities" string="Responsibilities">
                             <field name="user_id"/>
@@ -83,11 +83,11 @@
             <tree> 
                 <field name="volunteer_project_id"/>
                 <field name="partner_id"/>
-                <field name="state"/>
                 <field name="user_id"/>
                 <field name="start_date"/>
                 <field name="end_date"/>
                 <field name="state_onhold_until"/>
+                <field name="state"/>
             </tree> 
         </field> 
     </record>

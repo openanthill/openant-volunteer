@@ -24,28 +24,28 @@ class VolunteerEngagement(models.Model):
         string='Volunteer',
         required=True,
         index=True,
-        states={'finished': [('readonly', True)]},
+        states={'40-success': [('readonly', True)]},
         track_visibility='onchange',
         ondelete='restrict',
         help="The volunteer which is supporting the organisation with an engagement."
     )
     volunteer_project_id = fields.Many2one(
-        string='Project',
+        string='Project',   
         comodel_name='volunteer.project',
         required=True,
         tracking=True,
-        states={'finished': [('readonly', True)]},
+        states={'40-success': [('readonly', True)]},
         track_visibility='always'
     )
     state = fields.Selection(
         string='State',
         selection = [
-            ('new', 'New'),
-            ('active', 'Active'),
-            ('onhold', 'On Hold'),
-            ('success', 'Sucessful'),
-            ('cancel', 'Cancelled')],
-        default='new',
+            ('10-new', 'New'),
+            ('20-active', 'Active'),
+            ('30-onhold', 'On Hold'),
+            ('40-success', 'Sucessful'),
+            ('50-cancel', 'Cancelled')],
+        default='10-new',
         required=True,
         tracking=True,
         track_visibility='always',
@@ -64,14 +64,14 @@ class VolunteerEngagement(models.Model):
     start_date = fields.Date(
         string='Start date',
         tracking=True,
-        states={'finished': [('readonly', True)]},
+        states={'40-success': [('readonly', True)]},
         track_visibility='always',
         help="In this field the start date of an engagement can be saved."
     )
     end_date = fields.Date(
         string='End date',
         tracking=True,
-        states={'finished': [('readonly', True)]},
+        states={'40-success': [('readonly', True)]},
         track_visibility='always',
         help="In this field the end date of an engagement can be saved."
     )
@@ -100,7 +100,7 @@ class VolunteerEngagement(models.Model):
         help="The reason why a volunteer puts an engagement on hold"
     )
 
-    filerable_groupable_fields = ['state','state_onhold_until','start_date','end_date']
+    filterable_groupable_fields = ['state','state_onhold_until','start_date','end_date']
 
     _sql_constraints = [
         ('volunteer_engagement_unique_name', 'UNIQUE (name)',
@@ -126,7 +126,7 @@ class VolunteerEngagement(models.Model):
     @api.multi
     def action_volunteer_engagement_active(self):
         for res in self:
-            if res.state == 'new':
+            if res.state == '10-new':
                 project = res.volunteer_project_id
                 if project.timeframe == 'ongoing':
                     if not res.start_date:
@@ -140,7 +140,7 @@ class VolunteerEngagement(models.Model):
                     date_end = datetime.combine(project.date_end, time.min)
 
                 res.write({
-                    'state': 'active',
+                    'state': '20-active',
                     'start_date': date_start,
                     'end_date': date_end})
 
@@ -148,14 +148,14 @@ class VolunteerEngagement(models.Model):
     def action_volunteer_engagement_success(self):
         for res in self:
             res.write({
-                'state': 'success',
+                'state': '40-success',
                 'end_date': fields.Date.today()
             })
         
     @api.multi
     def action_volunteer_engagement_reset(self):
         for res in self:
-            return res.write({'state': 'new'})
+            return res.write({'state': '10-new'})
 
     @api.onchange('start_date', 'end_date')
     def _onchange_start_end_date(self):

@@ -7,7 +7,7 @@
         <field name="volunteer_project_id" ref="volunteer_project_collecting-donations_at_the_christmas_market"/>
         <field name="start_date" eval="(DateTime.today() - relativedelta(weeks=2)).strftime('%Y-%m-%d %H:%M')"/>
         <field name="end_date" eval="(DateTime.today() + relativedelta(weeks=1)).strftime('%Y-%m-%d %H:%M')"/>
-        <field name="state">active</field>        
+        <field name="state">20-active</field>        
     </record>
     
     <record id="demo_volunteer_engagement_2" model="volunteer.engagement">
@@ -15,7 +15,7 @@
         <field name="volunteer_project_id" ref="volunteer_project_collecting-donations_at_the_christmas_market"/>
         <field name="start_date" eval="(DateTime.today() - relativedelta(weeks=3)).strftime('%Y-%m-%d %H:%M')"/>
         <field name="end_date" eval="(DateTime.today() - relativedelta(weeks=2)).strftime('%Y-%m-%d %H:%M')"/>
-        <field name="state">cancel</field>
+        <field name="state">50-cancel</field>
     </record>
 
     <record id="demo_volunteer_engagement_3" model="volunteer.engagement">
@@ -23,7 +23,7 @@
         <field name="volunteer_project_id" ref="volunteer_project_welldrilling"/>
         <field name="start_date" eval="(DateTime.today() - relativedelta(days=3)).strftime('%Y-%m-%d %H:%M')"/>
         <field name="end_date" eval="(DateTime.today()).strftime('%Y-%m-%d %H:%M')"/>
-        <field name="state">new</field>
+        <field name="state">10-new</field>
     </record>
 
     <record id="demo_volunteer_engagement_4" model="volunteer.engagement">
@@ -31,7 +31,7 @@
         <field name="volunteer_project_id" ref="volunteer_project_welldrilling"/>
         <field name="start_date" eval="(DateTime.today() - relativedelta(days=27)).strftime('%Y-%m-%d %H:%M')"/>
         <field name="state_onhold_until" eval="(DateTime.today()).strftime('%Y-%m-%d %H:%M')"/>
-        <field name="state">onhold</field>
+        <field name="state">30-onhold</field>
     </record>
 
     <record id="demo_volunteer_engagement_5" model="volunteer.engagement">
@@ -39,7 +39,7 @@
         <field name="volunteer_project_id" ref="volunteer_project_welldrilling"/>
         <field name="start_date" eval="(DateTime.today() - relativedelta(weeks=5)).strftime('%Y-%m-%d %H:%M')"/>
         <field name="end_date" eval="(DateTime.today()).strftime('%Y-%m-%d %H:%M')"/>
-        <field name="state">success</field>
+        <field name="state">40-success</field>
     </record>
 
     <record id="demo_volunteer_engagement_6" model="volunteer.engagement">
@@ -47,7 +47,7 @@
         <field name="volunteer_project_id" ref="volunteer_project_welldrilling"/>
         <field name="start_date" eval="(DateTime.today() - relativedelta(days=8)).strftime('%Y-%m-%d %H:%M')"/>
         <field name="end_date" eval="(DateTime.today() - relativedelta(days=4)).strftime('%Y-%m-%d %H:%M')"/>
-        <field name="state">new</field>
+        <field name="state">10-new</field>
     </record>
 
 </odoo>
