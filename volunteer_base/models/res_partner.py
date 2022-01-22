@@ -25,3 +25,11 @@ class ResPartner(models.Model):
     def _compute_engagement_count(self):
         for partner in self:
             partner.engagement_count = len(partner.engagement_ids.ids)
+
+    @api.model
+    def _cron_update_volunteer(self):
+        partners = self.search([('is_company', '=', 'False'), ('volunteer', '=', 'False')])
+        
+        for partner in partners:
+            if partner.engagement_ids:
+                partner.write({"volunteer": True})      

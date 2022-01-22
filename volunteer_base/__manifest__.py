@@ -18,6 +18,7 @@
 
         'data/ir_sequence_data.xml',
         'data/reason_data.xml',
+        'data/volunteer_data.xml',
 
         'wizard/engagement_cancel_views.xml',
         'wizard/engagement_onhold_views.xml',
