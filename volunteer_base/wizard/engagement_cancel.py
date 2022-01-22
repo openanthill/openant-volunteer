@@ -16,6 +16,6 @@ class EngagementCancelled(models.TransientModel):
             engagement = res.env['volunteer.engagement'].browse(res.env.context.get('active_id'))
             engagement.write({
                 'cancel_reason': res.cancel_reason_id.id,
-                'state': 'cancel',
+                'state': '50-cancel',
                 'end_date': fields.Date.today()
             })

@@ -16,5 +16,5 @@ class EngagementOnhold(models.TransientModel):
             engagement = res.env['volunteer.engagement'].browse(res.env.context.get('active_id'))
             engagement.write({
                 'onhold_reason': res.onhold_reason_id.id,
-                'state': 'onhold'
+                'state': '30-onhold'
             })        

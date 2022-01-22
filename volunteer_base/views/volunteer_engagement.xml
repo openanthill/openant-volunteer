@@ -31,9 +31,9 @@
                             name="%(volunteer_engagement_cancel_action)d" 
                             class="oe_highlight"
                             attrs="{'invisible': ['|', ('state', '=', '40-success'), ('state', '=', '50-cancel')]}"/>
-                    <button name="action_volunteer_engagement_reset"
+                    <button name="action_volunteer_engagement_reopen"
                             type="object" 
-                            string="Reset to New"
+                            string="Reopen"
                             attrs="{'invisible': [('state', '!=', '40-success'), ('state', '!=', '50-cancel')]}"/>                            
                     <field name="state" widget="statusbar"/>
                 </header>

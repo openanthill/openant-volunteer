@@ -24,7 +24,8 @@ class VolunteerEngagement(models.Model):
         string='Volunteer',
         required=True,
         index=True,
-        states={'40-success': [('readonly', True)]},
+        states={'40-success': [('readonly', True)],
+                '50-cancel': [('readonly', True)]},
         track_visibility='onchange',
         ondelete='restrict',
         help="The volunteer which is supporting the organisation with an engagement."
@@ -34,7 +35,8 @@ class VolunteerEngagement(models.Model):
         comodel_name='volunteer.project',
         required=True,
         tracking=True,
-        states={'40-success': [('readonly', True)]},
+        states={'40-success': [('readonly', True)],
+                '50-cancel': [('readonly', True)]},
         track_visibility='always'
     )
     state = fields.Selection(
@@ -59,19 +61,23 @@ class VolunteerEngagement(models.Model):
         comodel_name='res.users',
         string='Responsible Person',
         track_visibility='onchange',
+        states={'40-success': [('readonly', True)],
+                '50-cancel': [('readonly', True)]},        
         default=lambda self: self.env.user
     )
     start_date = fields.Date(
         string='Start date',
         tracking=True,
-        states={'40-success': [('readonly', True)]},
+        states={'40-success': [('readonly', True)],
+                '50-cancel': [('readonly', True)]},
         track_visibility='always',
         help="In this field the start date of an engagement can be saved."
     )
     end_date = fields.Date(
         string='End date',
         tracking=True,
-        states={'40-success': [('readonly', True)]},
+        states={'40-success': [('readonly', True)],
+                '50-cancel': [('readonly', True)]},
         track_visibility='always',
         help="In this field the end date of an engagement can be saved."
     )
@@ -79,6 +85,8 @@ class VolunteerEngagement(models.Model):
         string='On hold until',
         tracking=True,
         track_visibility='always',
+        states={'40-success': [('readonly', True)],
+                '50-cancel': [('readonly', True)]},        
         help="In this field that date when a volunteering engagmeent was set on hold"
     )
     date_cancel = fields.Date(
@@ -143,6 +151,11 @@ class VolunteerEngagement(models.Model):
                     'state': '20-active',
                     'start_date': date_start,
                     'end_date': date_end})
+            
+            elif res.state == '30-onhold':
+                res.write({
+                    'state': '20-active',
+                    'state_onhold_until': fields.Date.today()})
 
     @api.multi
     def action_volunteer_engagement_success(self):
@@ -153,9 +166,9 @@ class VolunteerEngagement(models.Model):
             })
         
     @api.multi
-    def action_volunteer_engagement_reset(self):
+    def action_volunteer_engagement_reopen(self):
         for res in self:
-            return res.write({'state': '10-new'})
+            return res.write({'state': '20-active'})
 
     @api.onchange('start_date', 'end_date')
     def _onchange_start_end_date(self):
