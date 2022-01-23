@@ -4,42 +4,33 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0-20201123\n"
+"Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-22 11:15+0000\n"
-"PO-Revision-Date: 2021-07-22 17:03+0200\n"
+"POT-Creation-Date: 2022-01-23 12:00+0000\n"
+"PO-Revision-Date: 2022-01-27 14:47+0100\n"
+"Last-Translator: <>\n"
 "Language-Team: \n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0\n"
-"Last-Translator: \n"
-"Language: de_DE\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. module: volunteer_base
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__state
 msgid ""
 " * The 'New' status is the default when an engagement is created.\n"
-" * The 'Active' status is used when the volunteer is actively working in the "
-"engagement.\n"
-" * The 'On Hold' status is used when the volunteer is pausing his activities "
-"in an engagemen.\n"
-" * The 'Successful' status is set when the volunteer has successfully ended "
-"to engagement.\n"
-" * The 'Cancelled' status is used when a volunteer has aborted an "
-"engagnement befor successfully ending it."
+" * The 'Active' status is used when the volunteer is actively working in the engagement.\n"
+" * The 'On Hold' status is used when the volunteer is pausing his activities in an engagemen.\n"
+" * The 'Successful' status is set when the volunteer has successfully ended to engagement.\n"
+" * The 'Cancelled' status is used when a volunteer has aborted an engagnement befor successfully ending it."
 msgstr ""
-" * Der Status \"Neu\" ist die Standardeinstellung, wenn ein Engagement "
-"erstellt wird.\n"
-" * Der Status \"Aktiv\" wird verwendet, wenn  die*der Freiwillige aktiv am "
-"Engagement arbeitet.\n"
-" * Der Status \"In der Warteschleife\" wird verwendet, wenn die*der "
-"Freiwillige seine Aktivitäten in einem Engagemen pausiert.\n"
-" * Der Status \"Absolviert\" wird festgelegt, wenn die*der Freiwillige das "
-"Engagement erfolgreich beendet hat.\n"
-" * Der Status \"Beendet\" wird verwendet, wenn ein*e Freiwillige*r ein "
-"Engagement abgebrochen hat, bevor es erfolgreich beendet wurde."
+" * Der Status \"Neu\" ist die Standardeinstellung, wenn ein Engagement erstellt wird.\n"
+" * Der Status \"Aktiv\" wird verwendet, wenn  die*der Freiwillige aktiv am Engagement arbeitet.\n"
+" * Der Status \"In der Warteschleife\" wird verwendet, wenn die*der Freiwillige seine Aktivitäten in einem Engagemen pausiert.\n"
+" * Der Status \"Absolviert\" wird festgelegt, wenn die*der Freiwillige das Engagement erfolgreich beendet hat.\n"
+" * Der Status \"Beendet\" wird verwendet, wenn ein*e Freiwillige*r ein Engagement abgebrochen hat, bevor es erfolgreich beendet wurde."
 
 #. module: volunteer_base
 #: model:volunteer.project,name:volunteer_base.volunteer_project_collecting-donations_at_the_christmas_market
@@ -60,7 +51,7 @@ msgstr "Absolviert"
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_needaction
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_needaction
 msgid "Action Needed"
-msgstr "Aktion erforderlich"
+msgstr "Aktion notwendig"
 
 #. module: volunteer_base
 #: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancel_reason__active
@@ -86,13 +77,13 @@ msgstr "Status"
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_attachment_count
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_attachment_count
 msgid "Attachment Count"
-msgstr "Zahl der Anhänge"
+msgstr "Anzahl Anhänge"
 
 #. module: volunteer_base
 #: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_cancel_view_form
 #: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_onhold_view_form
 msgid "Cancel"
-msgstr "Beenden"
+msgstr "Abbrechen"
 
 #. module: volunteer_base
 #: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_view_form_base
@@ -134,9 +125,15 @@ msgid "Change of residency"
 msgstr "Wohnungswechsel"
 
 #. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_res_partner__volunteer
+#: model:ir.model.fields,help:volunteer_base.field_res_users__volunteer
+msgid "Check this box if this contact is a volunteer."
+msgstr "Aktivieren Sie dieses Kontrollkästchen, wenn es sich bei diesem Kontakt um eine/n Engagierte/n handelt. "
+
+#. module: volunteer_base
 #: model:ir.model,name:volunteer_base.model_res_config_settings
 msgid "Config Settings"
-msgstr "Einstellungen konfigurieren"
+msgstr "Konfiguration "
 
 #. module: volunteer_base
 #: model:ir.model,name:volunteer_base.model_res_partner
@@ -156,7 +153,7 @@ msgstr "Neues Engagement anlegen."
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__create_uid
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__create_uid
 msgid "Created by"
-msgstr "Angelegt von"
+msgstr "Erstellt von"
 
 #. module: volunteer_base
 #: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancel_reason__create_date
@@ -166,7 +163,7 @@ msgstr "Angelegt von"
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__create_date
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__create_date
 msgid "Created on"
-msgstr "Angelegt am"
+msgstr "Erstellt am"
 
 #. module: volunteer_base
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__date_cancel
@@ -215,17 +212,22 @@ msgstr "Krankheit"
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__display_name
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__display_name
 msgid "Display Name"
-msgstr "Name anzeigen"
+msgstr "Anzeigename"
 
 #. module: volunteer_base
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__engagement_default_duration_type
 msgid "Duration Type"
-msgstr ""
+msgstr "Typ Dauer"
 
 #. module: volunteer_base
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__date_end
 msgid "End Date"
 msgstr "Enddatum"
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_base_view_kanban
+msgid "End Date:"
+msgstr "Enddatum:"
 
 #. module: volunteer_base
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__end_date
@@ -255,7 +257,7 @@ msgstr "Engagement passt nicht"
 #: model_terms:ir.ui.view,arch_db:volunteer_base.view_partner_form_volunteer_base
 #: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_project_view_form_base
 msgid "Engagements"
-msgstr "Engagements"
+msgstr ""
 
 #. module: volunteer_base
 #: model:ir.model.fields,help:volunteer_base.field_res_config_settings__engagement_onhold_days
@@ -265,31 +267,30 @@ msgid ""
 "engagements when the onhold button is clicked."
 msgstr ""
 "Gib hier die Standardanzahl an Tagen für den On-hold-Zeitrahmen ein.  \n"
-"Die Anzahl der Tage wird verwendet, um das On-hold-Datum zu berechnen, wenn "
-"die On-hold-Taste gedrückt wird."
+"Die Anzahl der Tage wird verwendet, um das On-hold-Datum zu berechnen, wenn die On-hold-Taste gedrückt wird."
 
 #. module: volunteer_base
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_follower_ids
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_follower_ids
 msgid "Followers"
-msgstr "Follower"
+msgstr "Abonnenten"
 
 #. module: volunteer_base
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_channel_ids
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_channel_ids
 msgid "Followers (Channels)"
-msgstr "Follower (Kanäle)"
+msgstr "Abonnenten (Kanäle)"
 
 #. module: volunteer_base
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_partner_ids
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_partner_ids
 msgid "Followers (Partners)"
-msgstr "Follower (Partner)"
+msgstr "Abonnenten (Partner)"
 
 #. module: volunteer_base
 #: model:ir.model,name:volunteer_base.model_engagement_cancelled
 msgid "Get Lost Reason"
-msgstr ""
+msgstr "Erfahren Sie den Grund Ihres Scheiterns"
 
 #. module: volunteer_base
 #: model:ir.model,name:volunteer_base.model_engagement_onhold
@@ -315,31 +316,30 @@ msgstr "Hohe Arbeitsbelastung im Vollzeitjob"
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__id
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__id
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #. module: volunteer_base
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__message_unread
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_project__message_unread
 msgid "If checked new messages require your attention."
-msgstr "Wenn Haken gesetzt: Neue Nachrichten vorhanden."
+msgstr "Falls markiert, benötigen neue Nachrichten Ihre Kenntnisnahme."
 
 #. module: volunteer_base
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__message_needaction
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_project__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr "Wenn Haken gesetzt: Neue Nachrichten vorhanden."
+msgstr "Falls markiert, benötigen neue Nachrichten Ihre Kenntnisnahme."
 
 #. module: volunteer_base
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__message_has_error
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_project__message_has_error
 msgid "If checked, some messages have a delivery error."
-msgstr ""
-"Wenn Haken gesetzt: Manche Nachrichten haben einen Übermittlungsfehler."
+msgstr "Das Senden mancher Nachrichten ist fehlgeschlagen wenn dieses Fenster angekreuzt ist."
 
 #. module: volunteer_base
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__state_onhold_until
 msgid "In this field that date when a volunteering engagmeent was set on hold"
-msgstr ""
+msgstr "In diesem Feld wird das Datum gespeichert, an dem ein ehrenamtliches Engagement in den on-hold Status versetzt wurde"
 
 #. module: volunteer_base
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__end_date
@@ -349,8 +349,7 @@ msgstr "In diesem Feld kann das Enddatum eines Engagements gespeichert werden."
 #. module: volunteer_base
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__start_date
 msgid "In this field the start date of an engagement can be saved."
-msgstr ""
-"In diesem Feld kann das Startdatum eines Engagements gespeichert werden."
+msgstr "In diesem Feld kann das Startdatum eines Engagements gespeichert werden."
 
 #. module: volunteer_base
 #: model_terms:ir.ui.view,arch_db:volunteer_base.engagement_cancel_reason_view_search
@@ -362,7 +361,13 @@ msgstr "Archivierte einbeziehen"
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_is_follower
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_is_follower
 msgid "Is Follower"
-msgstr "Ist Follower"
+msgstr "Ist ein Abonnent"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_res_partner__volunteer
+#: model:ir.model.fields,field_description:volunteer_base.field_res_users__volunteer
+msgid "Is a Volunteer"
+msgstr "Ist ein Engagierte*r"
 
 #. module: volunteer_base
 #: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancel_reason____last_update
@@ -372,7 +377,7 @@ msgstr "Ist Follower"
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement____last_update
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project____last_update
 msgid "Last Modified on"
-msgstr "Zuletzt geändert"
+msgstr "Zuletzt geändert am"
 
 #. module: volunteer_base
 #: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancel_reason__write_uid
@@ -382,7 +387,7 @@ msgstr "Zuletzt geändert"
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__write_uid
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__write_uid
 msgid "Last Updated by"
-msgstr "Zuletzt aktualisiert"
+msgstr "Zuletzt aktualisiert durch"
 
 #. module: volunteer_base
 #: model:ir.model.fields,field_description:volunteer_base.field_engagement_cancel_reason__write_date
@@ -392,7 +397,7 @@ msgstr "Zuletzt aktualisiert"
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__write_date
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__write_date
 msgid "Last Updated on"
-msgstr "Zuletzt aktualisiert"
+msgstr "Zuletzt aktualisiert am"
 
 #. module: volunteer_base
 #: model:engagement.cancel.reason,name:volunteer_base.engagement_cancel_reason_interest_loss
@@ -408,13 +413,13 @@ msgstr "Grund für Abbruch"
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_main_attachment_id
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_main_attachment_id
 msgid "Main Attachment"
-msgstr ""
+msgstr "Hauptanhänge"
 
 #. module: volunteer_base
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_has_error
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_has_error
 msgid "Message Delivery error"
-msgstr "Übermittlungsfehler"
+msgstr "Error beim senden der Nachricht"
 
 #. module: volunteer_base
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_ids
@@ -432,7 +437,7 @@ msgstr "Monat(e)"
 #: model:ir.model.fields,field_description:volunteer_base.field_engagement_onhold_reason__name
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__name
 msgid "Name"
-msgstr "Name"
+msgstr ""
 
 #. module: volunteer_base
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_project__name
@@ -483,13 +488,13 @@ msgstr "Fehlernummer"
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__message_needaction_counter
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_project__message_needaction_counter
 msgid "Number of messages which requires an action"
-msgstr "Anzahl der Nachrichten, die eine Aktion verlangen"
+msgstr "Anzahl der Nachrichten, die eine Aktion erfordern"
 
 #. module: volunteer_base
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__message_has_error_counter
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_project__message_has_error_counter
 msgid "Number of messages with delivery error"
-msgstr "Anzahl der Nachrichten mit Übermittlungsfehler"
+msgstr "Anzahl der Nachrichten mit einem Fehler beim Senden."
 
 #. module: volunteer_base
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__message_unread_counter
@@ -500,7 +505,7 @@ msgstr "Anzahl ungelesener Nachrichten"
 #. module: volunteer_base
 #: selection:volunteer.engagement,state:0
 msgid "On Hold"
-msgstr "On Hold"
+msgstr ""
 
 #. module: volunteer_base
 #: model:ir.actions.act_window,name:volunteer_base.volunteer_engagement_onhold_action
@@ -550,7 +555,14 @@ msgstr "Überfällig"
 #. module: volunteer_base
 #: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_search
 msgid "Partner"
-msgstr "Partner"
+msgstr ""
+
+#. module: volunteer_base
+#: model:ir.actions.server,name:volunteer_base.ir_cron_update_volunteer_ir_actions_server
+#: model:ir.cron,cron_name:volunteer_base.ir_cron_update_volunteer
+#: model:ir.cron,name:volunteer_base.ir_cron_update_volunteer
+msgid "Partner: update volunteer state"
+msgstr "Partner: Engagierten Status aktualisieren"
 
 #. module: volunteer_base
 #: selection:volunteer.engagement,activity_state:0
@@ -602,8 +614,24 @@ msgstr "Referenz"
 
 #. module: volunteer_base
 #: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_view_form_base
-msgid "Reset to New"
-msgstr "Zurücksetzen auf Neu"
+msgid "Reopen"
+msgstr "Wieder öffnen "
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_base_view_kanban
+msgid "Responsibel:"
+msgstr "Verantwortlich:"
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_view_form_base
+msgid "Responsibilities"
+msgstr "Verantwortlichkeiten"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__user_id
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_base_view_kanban
+msgid "Responsible Person"
+msgstr "Verantwortliche Person"
 
 #. module: volunteer_base
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__activity_user_id
@@ -618,12 +646,8 @@ msgstr "Engagements suchen"
 
 #. module: volunteer_base
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_project__timeframe
-msgid ""
-"Select wether the project has a conrete period with a start end end date or "
-"is ongoing"
-msgstr ""
-"Auswählen, ob das Projekt eine konkrete Laufzeit mit Start- und Enddatum hat "
-"oder dauerhaft läuft"
+msgid "Select wether the project has a conrete period with a start end end date or is ongoing"
+msgstr "Auswählen, ob das Projekt eine konkrete Laufzeit mit Start- und Enddatum hat oder dauerhaft läuft"
 
 #. module: volunteer_base
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_project__sequence
@@ -632,12 +656,8 @@ msgstr "Reihenfolge, um Engagementprojekte leicht zu identifizieren"
 
 #. module: volunteer_base
 #: model_terms:ir.actions.act_window,help:volunteer_base.engagement_cancel_reason_action
-msgid ""
-"Some examples of cancel reasons: \"Chaotic Organisation\", \"Lack of "
-"apreciation\""
-msgstr ""
-"Beispiele für Beendigungsgründe: \"Schlechte Organisation\", \"Mangel an "
-"Anerkennung\""
+msgid "Some examples of cancel reasons: \"Chaotic Organisation\", \"Lack of apreciation\""
+msgstr "Beispiele für Beendigungsgründe: \"Schlechte Organisation\", \"Mangel an Anerkennung\""
 
 #. module: volunteer_base
 #: model_terms:ir.actions.act_window,help:volunteer_base.engagement_onhold_reason_action
@@ -647,12 +667,12 @@ msgstr "Beispiele für On Hold-Gründe: \"unterwegs\", \"persönlich\""
 #. module: volunteer_base
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_project__engagement_default_duration_type
 msgid "Specify duration type for engagement default duration."
-msgstr ""
+msgstr "Geben Sie den Dauer Typ für die Standarddauer des Engagements an."
 
 #. module: volunteer_base
 #: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_view_form_base
 msgid "Start"
-msgstr "Start"
+msgstr ""
 
 #. module: volunteer_base
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__date_start
@@ -660,11 +680,15 @@ msgid "Start Date"
 msgstr "Startdatum"
 
 #. module: volunteer_base
-#: code:addons/volunteer_base/models/volunteer_project.py:92
+#: code:addons/volunteer_base/models/volunteer_project.py:91
 #, python-format
-msgid ""
-"Start Date should be before or be the same as End Date for Projects '%s'."
+msgid "Start Date should be before or be the same as End Date for Projects '%s'."
 msgstr "Startdatum eines Projektes sollte vor dem Enddatum liegen '%s'."
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_base_view_kanban
+msgid "Start Date:"
+msgstr "Startdatum:"
 
 #. module: volunteer_base
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__start_date
@@ -674,7 +698,7 @@ msgstr "Startdatum"
 #. module: volunteer_base
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__state
 msgid "State"
-msgstr "Staat"
+msgstr "Bundesland"
 
 #. module: volunteer_base
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__activity_state
@@ -709,8 +733,7 @@ msgstr "Die Engagementreferenz muss eindeutig sein!"
 #. module: volunteer_base
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_project__active
 msgid "The active field allows you to hide the project without removing it."
-msgstr ""
-"Das aktive Feld erlaubt es, das Projekt auszublenden ohne es zu entfernen."
+msgstr "Das aktive Feld erlaubt es, das Projekt auszublenden ohne es zu entfernen."
 
 #. module: volunteer_base
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__cancel_reason_id
@@ -725,9 +748,7 @@ msgstr "On Hold-Grund"
 #. module: volunteer_base
 #: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__partner_id
 msgid "The volunteer which is supporting the organisation with an engagement."
-msgstr ""
-"Die*der Freiwillige, die*der die Organisation mit einem Engagement "
-"unterstützt."
+msgstr "Die*der Freiwillige, die*der die Organisation mit einem Engagement unterstützt."
 
 #. module: volunteer_base
 #: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_view_form_base
@@ -761,24 +782,22 @@ msgstr "Ungelesene Nachrichten"
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_unread_counter
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_unread_counter
 msgid "Unread Messages Counter"
-msgstr ""
+msgstr "Zähler der ungelesenen Nachrichten"
 
 #. module: volunteer_base
 #: model_terms:ir.actions.act_window,help:volunteer_base.engagement_cancel_reason_action
-msgid ""
-"Use cancel reasons to explain why an engagement was canceled by an volunteer."
-msgstr ""
-"Benutze Beendigungsgründe, um zu erläutern, warum ein Engagement von einer*m "
-"Engagierten beendet wurde."
+msgid "Use cancel reasons to explain why an engagement was canceled by an volunteer."
+msgstr "Benutze Beendigungsgründe, um zu erläutern, warum ein Engagement von einer*m Engagierten beendet wurde."
 
 #. module: volunteer_base
 #: model_terms:ir.actions.act_window,help:volunteer_base.engagement_onhold_reason_action
-msgid ""
-"Use on hold reasons to explain why an engagement was put on hold by an "
-"volunteer."
-msgstr ""
-"Benutze On Hold-Gründe, um zu erläutern, warum ein Engagement von einer*m "
-"Engagierten pausiert wurde."
+msgid "Use on hold reasons to explain why an engagement was put on hold by an volunteer."
+msgstr "Benutze On Hold-Gründe, um zu erläutern, warum ein Engagement von einer*m Engagierten pausiert wurde."
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_base_view_kanban
+msgid "User Image"
+msgstr "Benutzerbild "
 
 #. module: volunteer_base
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__partner_id
@@ -800,14 +819,33 @@ msgid "Volunteer Projects"
 msgstr "Engagementprojekte"
 
 #. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_base_view_kanban
+msgid "Volunteer:"
+msgstr "Engagierte*r:"
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.view_res_partner_filter_volunteer
+msgid "Volunteers"
+msgstr "Engagierte"
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__website_message_ids
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__website_message_ids
+msgid "Website Messages"
+msgstr "Website-Nachrichten"
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__website_message_ids
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_project__website_message_ids
+msgid "Website communication history"
+msgstr "Website-Kommunikationshistorie"
+
+#. module: volunteer_base
 #: selection:volunteer.project,engagement_default_duration_type:0
 msgid "Week(s)"
 msgstr "Woche(n)"
 
 #. module: volunteer_base
 #: model_terms:ir.actions.act_window,help:volunteer_base.volunteer_engagement_action
-msgid ""
-"openAnt helps you to easily track all activities related to an engagment."
-msgstr ""
-"openAnt hilft dir, alle auf ein Engagement bezogenen Aktivitäten zu "
-"verfolgen."
+msgid "openAnt helps you to easily track all activities related to an engagment."
+msgstr "openAnt hilft dir, alle auf ein Engagement bezogenen Aktivitäten zu verfolgen."

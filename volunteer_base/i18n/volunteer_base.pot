@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0-20201123\n"
+"Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-22 11:15+0000\n"
-"PO-Revision-Date: 2021-07-22 11:15+0000\n"
+"POT-Creation-Date: 2022-01-23 12:00+0000\n"
+"PO-Revision-Date: 2022-01-23 12:00+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -117,6 +117,12 @@ msgid "Change of residency"
 msgstr ""
 
 #. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_res_partner__volunteer
+#: model:ir.model.fields,help:volunteer_base.field_res_users__volunteer
+msgid "Check this box if this contact is a volunteer."
+msgstr ""
+
+#. module: volunteer_base
 #: model:ir.model,name:volunteer_base.model_res_config_settings
 msgid "Config Settings"
 msgstr ""
@@ -205,6 +211,11 @@ msgstr ""
 #. module: volunteer_base
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__date_end
 msgid "End Date"
+msgstr ""
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_base_view_kanban
+msgid "End Date:"
 msgstr ""
 
 #. module: volunteer_base
@@ -336,6 +347,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__message_is_follower
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__message_is_follower
 msgid "Is Follower"
+msgstr ""
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_res_partner__volunteer
+#: model:ir.model.fields,field_description:volunteer_base.field_res_users__volunteer
+msgid "Is a Volunteer"
 msgstr ""
 
 #. module: volunteer_base
@@ -527,6 +544,13 @@ msgid "Partner"
 msgstr ""
 
 #. module: volunteer_base
+#: model:ir.actions.server,name:volunteer_base.ir_cron_update_volunteer_ir_actions_server
+#: model:ir.cron,cron_name:volunteer_base.ir_cron_update_volunteer
+#: model:ir.cron,name:volunteer_base.ir_cron_update_volunteer
+msgid "Partner: update volunteer state"
+msgstr ""
+
+#. module: volunteer_base
 #: selection:volunteer.engagement,activity_state:0
 #: selection:volunteer.project,activity_state:0
 msgid "Planned"
@@ -576,7 +600,23 @@ msgstr ""
 
 #. module: volunteer_base
 #: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_view_form_base
-msgid "Reset to New"
+msgid "Reopen"
+msgstr ""
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_base_view_kanban
+msgid "Responsibel:"
+msgstr ""
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_view_form_base
+msgid "Responsibilities"
+msgstr ""
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__user_id
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_base_view_kanban
+msgid "Responsible Person"
 msgstr ""
 
 #. module: volunteer_base
@@ -626,9 +666,14 @@ msgid "Start Date"
 msgstr ""
 
 #. module: volunteer_base
-#: code:addons/volunteer_base/models/volunteer_project.py:92
+#: code:addons/volunteer_base/models/volunteer_project.py:91
 #, python-format
 msgid "Start Date should be before or be the same as End Date for Projects '%s'."
+msgstr ""
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_base_view_kanban
+msgid "Start Date:"
 msgstr ""
 
 #. module: volunteer_base
@@ -731,6 +776,11 @@ msgid "Use on hold reasons to explain why an engagement was put on hold by an vo
 msgstr ""
 
 #. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_base_view_kanban
+msgid "User Image"
+msgstr ""
+
+#. module: volunteer_base
 #: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__partner_id
 #: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_search
 #: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_view_form_base
@@ -747,6 +797,28 @@ msgstr ""
 #. module: volunteer_base
 #: model:ir.model,name:volunteer_base.model_volunteer_project
 msgid "Volunteer Projects"
+msgstr ""
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.volunteer_engagement_base_view_kanban
+msgid "Volunteer:"
+msgstr ""
+
+#. module: volunteer_base
+#: model_terms:ir.ui.view,arch_db:volunteer_base.view_res_partner_filter_volunteer
+msgid "Volunteers"
+msgstr ""
+
+#. module: volunteer_base
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_engagement__website_message_ids
+#: model:ir.model.fields,field_description:volunteer_base.field_volunteer_project__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: volunteer_base
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_engagement__website_message_ids
+#: model:ir.model.fields,help:volunteer_base.field_volunteer_project__website_message_ids
+msgid "Website communication history"
 msgstr ""
 
 #. module: volunteer_base
