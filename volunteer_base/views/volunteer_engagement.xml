@@ -165,6 +165,10 @@
             <search string="Search Engagements">
                 <field name="partner_id" string="Volunteer"/>
                 <field name="volunteer_project_id"/>
+                <field name="user_id"/>
+                <filter name="my_assigned_engagements" string="My Engagements" 
+                        domain="[('user_id', '=', uid)]"
+                        help="Engagements that are assigned to me"/>
                 <group string="Group By" name="groupby">
                     <filter name="partner_groupby" string="Partner"
                         context="{'group_by': 'partner_id'}"/>
@@ -178,11 +182,12 @@
         <field name="res_model">volunteer.engagement</field>
         <field name="view_mode">tree,form,kanban,pivot</field>
         <field name="search_view_id" ref="volunteer_engagement_search"/>
+        <field name="context">{'search_default_my_assigned_engagements': 1}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Create a new engagemens for volunteers.
+                Create new engagemens for volunteers.
             </p><p>
-                openAnt helps you to easily track all activities related to an engagment.
+                This helps you to easily track all activities related to an engagment.
             </p>
         </field>
     </record>
