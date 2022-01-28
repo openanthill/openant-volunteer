@@ -15,7 +15,7 @@
         <field name="view_mode">kanban,tree,form</field>
         <field name="context">{'search_default_volunteer': 1,
                                'default_is_company': False,
-                               'default_customer': False,
+                               'default_customer': True,
                                'default_volunteer': True}</field>
         <field name="filter" eval="True"/>
         <field name="help" type="html">
