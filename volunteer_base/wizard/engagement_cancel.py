@@ -14,8 +14,14 @@ class EngagementCancelled(models.TransientModel):
     def action_cancel_reason_apply(self):
         for res in self:
             engagement = res.env['volunteer.engagement'].browse(res.env.context.get('active_id'))
+            
+            if not engagement.end_date:
+                date_end = fields.Date.today()
+            else:
+                date_end = engagement.end_date
+            
             engagement.write({
                 'cancel_reason': res.cancel_reason_id.id,
                 'state': '50-cancel',
-                'end_date': fields.Date.today()
+                'end_date': date_end
             })

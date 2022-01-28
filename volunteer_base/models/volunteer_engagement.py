@@ -160,9 +160,14 @@ class VolunteerEngagement(models.Model):
     @api.multi
     def action_volunteer_engagement_success(self):
         for res in self:
+            if not res.end_date:
+                date_end = fields.Date.today()
+            else:
+                date_end = res.end_date
+
             res.write({
                 'state': '40-success',
-                'end_date': fields.Date.today()
+                'end_date': date_end
             })
         
     @api.multi
